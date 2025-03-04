@@ -1,5 +1,6 @@
- import React from "react";
+import React from "react";
 // import MyRouter from "./Route/Route";
+import Main from "./pages/Main";
 
 
 function App() {
@@ -17,9 +18,9 @@ function App() {
 
   return (
     <div>    
-         
+      <Main />
+          
     {/* <MyRouter /> */}
-    app
 
  </div> 
   );

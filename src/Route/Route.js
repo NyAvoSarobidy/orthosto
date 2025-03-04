@@ -1,17 +1,17 @@
 
 
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Main  from "../pages/Main";
+// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+// import Main  from "../pages/Main";
 
-function MyRoute(){
+// function MyRoute(){
 
-return(
+// return(
 
-    <Routes>
-             <Route path="/" element={<Main />} />
-    </Routes>
-);
+//     <Routes>
+//              <Route path="/" element={<Main />} />
+//     </Routes>
+// );
 
-}
+// }
 
-export default MyRoute;
+// export default MyRoute;

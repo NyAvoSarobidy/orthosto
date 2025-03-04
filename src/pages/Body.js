@@ -1,8 +1,9 @@
 
 import React  from 'react';
 import './style/stylebody.css'
-import { Link } from "react-router-dom";
+
 import Typical from 'react-typical';
+
 function Body(){
 
   
@@ -37,14 +38,14 @@ function Body(){
           <br />
           <div className="row">
             <div className="col-12 col-md-auto mb-2 mb-md-0">
-              <Link to="" className="btn btn-danger w-100 fw-bold">
+              <a href="" className="btn btn-danger w-100 fw-bold">
                 <i className="fas fa-calendar-alt me-2"></i> PRENDRE RDV
-              </Link>
+              </a>
             </div>
             <div className="col-12 col-md-auto">
-              <Link to="" className="btn btn-primary w-100 fw-bold">
+              <a href="" className="btn btn-primary w-100 fw-bold">
                 <i className="fas fa-phone-alt me-2"></i> CONTACT
-              </Link>
+              </a>
             </div>
           </div>
         </div>
