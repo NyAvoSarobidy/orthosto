@@ -1,5 +1,5 @@
-import React from "react";
-import MyRouter from "./Route/Route";
+ import React from "react";
+// import MyRouter from "./Route/Route";
 
 
 function App() {
@@ -18,7 +18,8 @@ function App() {
   return (
     <div>    
          
-    <MyRouter />
+    {/* <MyRouter /> */}
+    app
 
  </div> 
   );
