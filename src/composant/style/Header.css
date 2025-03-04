@@ -1,0 +1,10 @@
+.text-small {
+    font-size: 0.700rem; /* Taille un peu réduite */
+  }  
+  .header-top-custom {
+    transition: all 0.5s;
+  
+  
+    background-color: rgb(46, 45, 45);
+  }
+  
