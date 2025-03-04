@@ -37,3 +37,12 @@
   border: none !important; /* Supprime la bordure */
   box-shadow: none !important; /* Supprime l'ombre */
 }
+
+.sary {
+  transition: transform 0.3s ease-in-out; /* Animation fluide */
+}
+
+.sary:hover {
+  transform: scale(1.05); /* Zoom de 5% */
+ 
+}

@@ -59,6 +59,16 @@
     }
   }
   
+  .abc {
 
+    animation: bounce 2s ease-in-out infinite; /* Animation continue */
+  }
   
-  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0); /* Position normale */
+    }
+    50% {
+      transform: translateY(-20px); /* L'icône monte */
+    }
+  }

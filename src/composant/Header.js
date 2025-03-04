@@ -15,12 +15,7 @@ function Header(){
             </p>
          
             </div>
-            <div className="col-12 col-md-4 d-flex flex-column align-items-start text-small">
-            <p className="text-white pt-2">
-              <strong> ©Copyright 2025 Tous Droits Réservés</strong>
-            </p>
          
-            </div>
            
             <div className="col-12 col-md-3 d-flex flex-column align-items-start align-items-md-end text-small">
             <p className="text-white pt-2">

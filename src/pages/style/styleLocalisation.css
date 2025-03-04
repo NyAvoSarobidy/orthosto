@@ -2,3 +2,34 @@
 
     background-color: rgb(240, 239, 237);
 }
+.sary2 {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .sary2:hover {
+    transform: scale(1.05); /* Zoom léger au survol */
+  }
+  
+  @media (max-width: 768px) {
+    .sary2 {
+      margin-bottom: 1rem; /* Espacement supplémentaire sur mobile */
+    }
+  }
+
+  .custom-loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
