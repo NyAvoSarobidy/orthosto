@@ -1,27 +1,36 @@
 import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faPhone, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faMapMarkerAlt,
+  faPhone,
+  faEnvelope,
+} from "@fortawesome/free-solid-svg-icons";
+import {
+  faFacebook,
+  faTwitter,
+  faInstagram,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 
-function Footer(){
-    return(
-        <>
-         <footer className="bg-dark text-white pt-5 pb-4">
+import './style/Footer.css'
+
+function Footer() {
+  return (
+    <footer className="bg-dark text-white pt-5 pb-4"> {/* `mt-auto` pour pousser le footer en bas */}
       <div className="container">
         <div className="row">
           {/* Section 1 : À propos */}
           <div className="col-md-4 mb-4">
-  <h5 className="text-uppercase mb-4">À propos de nous</h5>
-
-  <p>
-    Notre cabinet est équipé des dernières technologies pour vous garantir des soins précis, efficaces et confortables. Nous accordons une grande importance à l'accueil, à l'écoute et à la confiance que vous nous témoignez.
-  </p>
-</div>
+            <h5 className="text-uppercase mb-4">À propos de nous</h5>
+            <p>
+              Notre cabinet est équipé des dernières technologies pour vous garantir des soins précis, efficaces et confortables. Nous accordons une grande importance à l'accueil, à l'écoute et à la confiance que vous nous témoignez.
+            </p>
+          </div>
 
           {/* Section 2 : Liens utiles */}
           <div className="col-md-4 mb-4 align-items-center">
-            <h5 className="text-uppercase  mb-4">Liens utiles</h5>
-            <ul className="list-unstyled ">
+            <h5 className="text-uppercase mb-4">Liens utiles</h5>
+            <ul className="list-unstyled">
               <li className="mb-2">
                 <a href="/" className="text-white text-decoration-none">Accueil</a>
               </li>
@@ -89,7 +98,7 @@ function Footer(){
         </div>
       </div>
     </footer>
-        </>
-    )
+  );
 }
-export default Footer
+
+export default Footer;

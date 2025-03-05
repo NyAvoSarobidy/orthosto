@@ -11,7 +11,7 @@ function NavBar(){
             {/* <Header /> */}
             <nav className="navbar navbar-expand-lg navbar-light shadow-sm fixed-top" >
               <div className="container ">
-                <a className="navbar-brand text-danger fw-bold" href="#">    
+                <a className="navbar-brand text-danger fw-bold" href="/Accueil">    
                   ORTH<span style={{ color: "#15033f" }}>OSTO</span>
                 </a>
                 <button
@@ -28,7 +28,7 @@ function NavBar(){
                 <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav mx-auto">
                   <li className="nav-item">
-                    <a className="nav-link" href="#">
+                    <a className="nav-link" href="/Accueil">
                       <i className="fas fa-home me-2"></i> Accueil
                     </a>
                   </li>
@@ -44,7 +44,7 @@ function NavBar(){
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#">
+                    <a className="nav-link" href="/Prendre-RDV">
                       <i className="fas fa-calendar-check me-2"></i> Prendre un RDV
                     </a>
                   </li>

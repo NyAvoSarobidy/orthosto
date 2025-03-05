@@ -4,7 +4,7 @@ import './style/Header.css'
 
 function Header(){
     return(
-        <header className="header-top-custom border-bottom topbar">
+        <header className="header-top-custom border-bottom">
         <div className="container">
           <div className="row justify-content-between align-items-center">
             

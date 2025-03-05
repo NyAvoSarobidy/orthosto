@@ -1,23 +1,24 @@
 import React from "react";
 import NavBar from "../composant/NavBar";
 
-import PageAccueil from "./PageAccueil.js"
-
 
 import Footer from '../composant/Footer'
 import Header from '../composant/Header'
-
-function Main(){
+import Formulaire from './Elements/Fomulaires'
+function Formulaires(){
     return(
-    
         <>
             <NavBar/>
-             <PageAccueil />
-             <Footer />
+
+            
+            <Formulaire/>
+
+
+            <Footer />
             <Header /> 
         </>
 
     )
 
 }
-export default Main;
+export default Formulaires;

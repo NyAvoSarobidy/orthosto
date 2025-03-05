@@ -1,6 +1,6 @@
 import React from "react";
-// import MyRouter from "./Route/Route";
-import Main from "./pages/Main";
+import MyRouter from "./Route/Route";
+// import Main from "./pages/Main";
 
 
 function App() {
@@ -17,9 +17,10 @@ function App() {
   // }, []);
 
   return (
+    
     <div>    
-      <Main />        
-    {/* <MyRouter /> */}
+      {/* <Main />         */}
+     <MyRouter /> 
    </div> 
   );
 }

@@ -1,0 +1,16 @@
+
+  /* Conteneur principal */
+  #root { /* Ou le conteneur principal de votre application */
+    flex: 1; /* Permet au contenu de prendre tout l'espace disponible */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Styles pour le footer */
+  footer {
+    flex-shrink: 0; /* Empêche le footer de rétrécir */
+    background-color: #343a40; /* Couleur de fond du footer */
+    color: white; /* Couleur du texte */
+    padding-top: 2rem; /* Espacement intérieur */
+    padding-bottom: 2rem; /* Espacement intérieur */
+  }
