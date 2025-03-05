@@ -16,7 +16,7 @@ function Galerie() {
         <div id="Galerie" className="mt-5 py-5 bg-light"> {/* Ajout de padding et fond clair */}
             <div className="container">
                 <h2 className="text-center mb-4 fw-bold">Galerie</h2>
-                <p className="text-center lead mb-5">Découvrez nos réalisations en images.</p>
+                <p className="text-center lead mb-5">Des sourires éclatants, des soins bienveillants : explorez nos réalisations.</p>
 
                 <div className="carousel slide" data-bs-ride="carousel" id="myCarousel">
                     {/* Indicateurs */}

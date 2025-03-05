@@ -1,41 +1,89 @@
+/* RendezVous.css */
+#RendezVous {
+  padding: 60px 0;
+}
 
-/* Pour le titre */
+.card1 {
+  background-color: #ffffff;
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card1:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
 .title {
-    font-family: 'Cinzel', serif;
-    font-weight: 700;
-    font-size: 2rem; /* ou ajuste selon la taille souhaitée */
-    text-align: center;
-    color: #333; /* une couleur douce pour le texte */
-  }
-  
-  /* Pour le texte en italique */
-  .text {
-    font-family: 'Raleway', sans-serif;
-    font-style: italic;
-    font-weight: 300;
-    font-size: 0.9rem;
-    line-height: 1.8;
-    text-align: center;
-    color: #555; /* légèrement gris pour une lecture fluide */
-  }
-  
-  @media (max-width: 768px) {
-    .col-md-3 img {
-      max-width: 80%; /* Réduire la taille des images sur mobile */
-      margin: 0 auto; /* Centrer les images */
-    }
-  }
-  
-  .icon {
-    font-size: 3rem; /* Taille de l'icône */
-    text-align: center;
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.text {
+  font-family: 'Raleway', sans-serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.8;
+  text-align: center;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.icon {
+  font-size: 3rem;
+  text-align: center;
+  color: #28a745; /* Couleur verte pour l'icône */
+}
+
+.btn-hover {
+  transition: all 0.3s ease;
+  border-radius: 25px;
+  padding: 10px 20px;
+}
+
+.btn-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-outline-primary {
+  border-color: #007bff;
+  color: #007bff;
+}
+
+.btn-outline-primary:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-outline-danger {
+  border-color: #dc3545;
+  color: #dc3545;
+}
+
+.btn-outline-danger:hover {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .title {
+      font-size: 1.5rem;
   }
 
-  .card1 {
-    transition: transform 0.3s ease-in-out; /* Animation fluide */
+  .text {
+      font-size: 0.9rem;
   }
-  
-  .card1:hover {
-    transform: scale(1.05); /* Zoom de 5% */
-    background-color:whitesmoke;
+
+  .btn-hover {
+      width: 100%;
+      margin-bottom: 10px;
   }
+}
