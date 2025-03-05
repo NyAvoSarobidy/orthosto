@@ -21,35 +21,36 @@ function Localisation() {
 
   return (
     <>
-      <div id="Localisation" className="Localisation mt-3 pb-3">
+      <div id="Localisation" className="Localisation mt-3 pb-5">
         <div className="container pt-5">
-          <h2 className="text-center text-danger fs-bold">Localisation</h2>
-          <p>
+          <h2 className="text-center text-danger fw-bold mb-4">Localisation</h2>
+          <p className="text-center lead mb-4">
             Notre cabinet d'orthodontie et stomatologie situé au centre ville de Mulhouse vous accueille du lundi au
             vendredi sur rendez-vous.
             <br />
             Pour prendre RDV auprès d'un médecin orthodontiste, vous pouvez simplement utiliser notre service de prise de
-            RDV sur internet. En cas d'urgence, nous vous invitons à nous contacter par téléphone au 03 89 66 01 16.
+            RDV sur internet. En cas d'urgence, nous vous invitons à nous contacter par téléphone au{' '}
+            <strong>03 89 66 01 16</strong>.
           </p>
 
           {/* Section des images */}
-          <div className="row align-items-center gap-3">
-            <div className="col-12 col-md-3 mx-auto">
-              <img src={cab2} alt="Orthodontiste" className="img-thumbnail rounded sary2" />
-            </div>
-            <div className="col-12 col-md-3 mx-auto">
-              <img src={cab1} alt="Orthodontiste" className="img-thumbnail rounded sary2" />
-            </div>
-            <div className="col-12 col-md-3 mx-auto">
-              <img src={cab3} alt="Orthodontiste" className="img-thumbnail rounded sary2" />
-            </div>
+          <div className="row justify-content-center gap-3 mb-4">
+            {[cab2, cab1, cab3].map((image, index) => (
+              <div key={index} className="col-12 col-md-3 mx-auto">
+                <img
+                  src={image}
+                  alt={`Cabinet ${index + 1}`}
+                  className="img-thumbnail rounded sary2"
+                />
+              </div>
+            ))}
           </div>
 
           {/* Bouton pour ouvrir la modal */}
-          <div className="row align-items-center pt-4">
-            <div className="col col-md-auto mx-auto">
-              <Button onClick={handleShow} className="btn btn-danger w-100 text-white">
-                <i className="fas fa-map-marker-alt me-2"></i> VOIR MAP
+          <div className="row justify-content-center">
+            <div className="col col-md-auto">
+              <Button onClick={handleShow} className="btn btn-danger w-100 text-white fw-bold">
+                <i className="fas fa-map-marker-alt me-2"></i> VOIR LA CARTE
               </Button>
             </div>
           </div>
@@ -57,11 +58,11 @@ function Localisation() {
       </div>
 
       {/* Modal avec la carte Google Maps */}
-      <Modal show={show} onHide={handleClose} size="lg">
+      <Modal show={show} onHide={handleClose} size="lg" centered>
         <Modal.Header className="bg-light" closeButton>
           <Modal.Title>Localisation sur la carte</Modal.Title>
         </Modal.Header>
-        <Modal.Body style={{ position: 'relative' }}>
+        <Modal.Body style={{ position: 'relative', minHeight: '450px' }}>
           {/* Afficher le loader pendant le chargement */}
           {isLoading && <Loader />}
 
@@ -73,6 +74,7 @@ function Localisation() {
             allowFullScreen
             loading="lazy"
             onLoad={handleIframeLoad} // Détecter quand l'iframe est chargé
+            style={{ opacity: isLoading ? 0 : 1, transition: 'opacity 0.5s ease' }} // Effet de fondu
           />
         </Modal.Body>
         <Modal.Footer>

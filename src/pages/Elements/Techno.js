@@ -1,78 +1,70 @@
-import React from "react"
-import image from "./image/invisalign.jpg"
-import image2 from "./image/1.jpg"
-import image3 from "./image/2.jpg"
-import '../style/style.css'
-function Techonologie (){
+import React from "react";
+import image from "./image/invisalign.jpg";
+import image2 from "./image/1.jpg";
+import image3 from "./image/2.jpg";
+import '../style/style.css';
 
-    return(
-        <div id="techno" className=" mt-5">
+function Technologie() {
+    return (
+        <div id="techno" className="mt-5 py-5 bg-light"> {/* Ajout de padding vertical et fond clair */}
+            <div className="container">
+                <div className="row">
+                    <div className="col-md-12">
+                        <div className="card shadow-sm">
+                            <div className="card-header bg-dark d-flex align-items-center justify-content-start">
+                                <i className="fas fa-robot me-3 fs-2 text-white"></i>
+                                <h5 className="mb-0 text-white">Nos technologies innovantes</h5>
+                            </div>
+                            <div className="card-body bg-white">
+                                <p className="text fw-bold lead text-center mb-4"> {/* Texte centré et plus grand */}
+                                    Nous investissons dans les dernières technologies orthodontiques pour vous garantir des traitements efficaces et confortables. De la radiographie numérique aux techniques d'imagerie 3D, nous utilisons des outils de pointe pour évaluer et planifier vos soins avec précision.
+                                </p>
 
-<div className="container">
+                                <div className="service-container row justify-content-center"> {/* Utilisation de la grille Bootstrap */}
+                                    <div className="service-item col-md-5 col-sm-12 mb-4">
+                                        <h3>Aligneurs dentaires transparents</h3>
+                                    </div>
+                                    <div className="service-item col-md-5 col-sm-12 mb-4">
+                                        <h3>Implants dentaires</h3>
+                                    </div>
+                                    <div className="service-item col-md-5 col-sm-12 mb-4">
+                                        <h3>Radiologie 3D</h3>
+                                    </div>
+                                    <div className="service-item col-md-5 col-sm-12 mb-4">
+                                        <h3>Empreintes numériques</h3>
+                                    </div>
+                                </div>
 
-<div className="col-md-12">
-
-<div className="row row-cols-1 g-4"> {/* `row-cols-1` pour une seule colonne par ligne sur tous les écrans */}
-  
-  <div className="col-md-12">
-      <div className="card shadow-sm text-dark">
-            <div className="card-header d-flex bg-dark align-items-center justify-content-start" 
-           >
-                <i className="fas fa-robot me-3 fs-2 eto"></i>
-                <h5 className="mb-0 text-white" >Nos technologies innovantes</h5>
+                                <div className="row justify-content-center mt-4"> {/* Centrer les images */}
+                                    <div className="col-md-3 col-sm-6 text-center">
+                                        <img
+                                            src={image2}
+                                            alt="Orthodontiste"
+                                            className="img-thumbnail rounded hover-zoom"
+                                        />
+                                    </div>
+                                    <div className="col-md-3 col-sm-6 text-center">
+                                        <img
+                                            src={image}
+                                            alt="Orthodontiste"
+                                            className="img-thumbnail rounded hover-zoom"
+                                        />
+                                    </div>
+                                    <div className="col-md-3 col-sm-6 text-center">
+                                        <img
+                                            src={image3}
+                                            alt="Orthodontiste"
+                                            className="img-thumbnail rounded hover-zoom"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-          <div className="card-body bg-light">
-              <div className="d-flex align-items-center">
-              <p className="text fw-bold">
-                 
-                  Nous investissons dans les dernières technologies orthodontiques pour vous garantir des traitements efficaces et confortables. De la radiographie numérique aux techniques d'imagerie 3D,
-                   nous utilisons des outils de pointe pour évaluer et planifier vos soins avec précision.  </p> 
-                  
-              </div>
-              <div className="service-container">
-                <div className="service-item">
-                    <h3>Aligneurs dentaires transparents</h3>
-                </div>
-                <div className="service-item">
-                    <h3>Implants dentaires</h3>
-                </div>
-                <div className="service-item">
-                    <h3>Radiologie 3D</h3>
-                </div>
-                <div className="service-item">
-                    <h3>Empreintes numériques</h3>
-                </div>
-                </div>
-                <div className="col-md-12 text-center" >
-                    <img 
-                            src={image2} 
-                            alt="Orthodontiste"  
-                            className="img-thumbnail rounded ms-5 mt-5"
-                            style={{ maxWidth: "20%", height: "auto" }}
-                        />
-                           <img 
-                            src={image} 
-                            alt="Orthodontiste"  
-                            className="img-thumbnail rounded ms-5 mt-5"
-                            style={{ maxWidth: "20%", height: "auto" }}
-                        />
-                           <img 
-                            src={image3} 
-                            alt="Orthodontiste"  
-                            className="img-thumbnail rounded ms-5 mt-5"
-                            style={{ maxWidth: "20%", height: "auto" }}
-                        />
-               </div>
-          </div>
-      </div>
-  </div>
-  
-              </div>
-</div>
-
-
-  </div>
-</div>
-    )
+    );
 }
-export default Techonologie
+
+export default Technologie;

@@ -1,35 +1,68 @@
-.Localisation{
-
-    background-color: rgb(240, 239, 237);
+.Localisation {
+  background-color: rgb(240, 239, 237);
+  padding: 60px 0;
 }
+
 .sary2 {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sary2:hover {
+  transform: scale(1.05); /* Zoom léger au survol */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
+}
+
+.modal-content {
+  border-radius: 15px;
+  overflow: hidden;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
   }
-  
-  .sary2:hover {
-    transform: scale(1.05); /* Zoom léger au survol */
+  to {
+      opacity: 1;
+      transform: translateY(0);
   }
-  
-  @media (max-width: 768px) {
-    .sary2 {
+}
+
+.custom-loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sary2 {
       margin-bottom: 1rem; /* Espacement supplémentaire sur mobile */
-    }
   }
 
-  .custom-loader {
-    border: 4px solid #f3f3f3;
-    border-top: 4px solid #3498db;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    animation: spin 1s linear infinite;
-    margin: 0 auto;
+  .Localisation {
+      padding: 40px 0;
   }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+
+  .modal-content {
+      margin: 10px;
   }
+}
