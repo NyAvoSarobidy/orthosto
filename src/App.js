@@ -19,8 +19,9 @@ function App() {
   return (
     
     <div>    
+      
       {/* <Main />         */}
-     <MyRouter /> 
+      <MyRouter />  
    </div> 
   );
 }

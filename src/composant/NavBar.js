@@ -2,7 +2,7 @@
 import React from 'react';
 import "./style/NavBar.css"
 // import Header from './Header'
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function NavBar(){
 
@@ -11,9 +11,9 @@ function NavBar(){
             {/* <Header /> */}
             <nav className="navbar navbar-expand-lg navbar-light shadow-sm fixed-top" >
               <div className="container ">
-                <a className="navbar-brand text-danger fw-bold" href="/Accueil">    
-                  ORTH<span style={{ color: "#15033f" }}>OSTO</span>
-                </a>
+                <Link className="navbar-brand text-danger fw-bold" to="/">    
+                  ORTHO<span style={{ color: "#15033f" }}>STO</span>
+                </Link>
                 <button
                   className="navbar-toggler"
                   type="button"
@@ -28,9 +28,9 @@ function NavBar(){
                 <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav mx-auto">
                   <li className="nav-item">
-                    <a className="nav-link" href="/Accueil">
+                    <Link className="nav-link" to="/">
                       <i className="fas fa-home me-2"></i> Accueil
-                    </a>
+                    </Link>
                   </li>
                   <li className="nav-item">
                     <a className="nav-link" href="#">
@@ -44,9 +44,11 @@ function NavBar(){
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="/Prendre-RDV">
+                    <Link className="nav-link" 
+                    target="_blank"
+                     to="https://www.doctolib.fr/stomatologue/mulhouse/tuncay-sahin/booking/motives?specialityId=25&telehealth=false&placeId=practice-228902&profile_skipped=true&bookingFunnelSource=external_referral">
                       <i className="fas fa-calendar-check me-2"></i> Prendre un RDV
-                    </a>
+                    </Link>
                   </li>
                   <li className="nav-item">
                     <a className="nav-link" href="#">

@@ -9,11 +9,7 @@ function Formulaires(){
     return(
         <>
             <NavBar/>
-
-            
             <Formulaire/>
-
-
             <Footer />
             <Header /> 
         </>

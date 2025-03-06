@@ -1,12 +1,11 @@
-
-
-
-
 import React, { useState, useEffect } from "react";
 import { Container, Form, Button, Row, Col, Alert, Spinner } from "react-bootstrap";
 import { FaInfoCircle, FaExclamationTriangle } from "react-icons/fa"; // Icônes pour la remarque
+import emailjs from "emailjs-com"; // Importer EmailJS
+import Swal from "sweetalert2";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../style/Formulaire.css"; // Fichier CSS personnalisé
+
 
 function Formulaire() {
   const [loading, setLoading] = useState(true); // État pour gérer le loader
@@ -17,13 +16,13 @@ function Formulaire() {
     email: "",
     motif: "",
     remarques: "",
-    date: "",
-    heure: "",
     carteVitale: false,
     courrierDentiste: false,
     ordonnance: false,
+    service: "gmail", // Par défaut, utiliser Gmail
   });
   const [submitted, setSubmitted] = useState(false); // État pour afficher un message de succès
+  const [isLoading, setIsLoading] = useState(false);
 
   // Simuler un chargement de 10 secondes
   useEffect(() => {
@@ -42,24 +41,72 @@ function Formulaire() {
     });
   };
 
-  // Gestion de la soumission du formulaire
+
+  // Gestion de la soumission du formulaire avec EmailJS
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Formulaire soumis :", formData);
-    setSubmitted(true); // Afficher un message de succès
-    setFormData({
-      nom: "",
-      prenom: "",
-      telephone: "",
-      email: "",
-      motif: "",
-      remarques: "",
-      date: "",
-      heure: "",
-      carteVitale: false,
-      courrierDentiste: false,
-      ordonnance: false,
-    });
+    setIsLoading(true);
+
+    const getServiceByEmail = (email) => {
+      if (email.includes("@gmail.com")) {
+        return "gmail"; // Utiliser le service Gmail
+      } else if (email.includes("@outlook.com") || email.includes("@hotmail.com")) {
+        return "outlook"; // Utiliser le service Outlook
+      } else {
+        return "gmail"; // Par défaut, utiliser Gmail (ou un autre service)
+      }
+    };
+    // Déterminer le service d'envoi en fonction de l'email
+    const service = getServiceByEmail(formData.email);
+  
+    // Paramètres pour l'email
+    const templateParams = {
+      nom: formData.nom,
+      prenom: formData.prenom,
+      email: formData.email,
+      telephone: formData.telephone,
+      motif: formData.motif,
+      remarques: formData.remarques,
+      carteVitale: formData.carteVitale ? "Oui" : "Non",
+      courrierDentiste: formData.courrierDentiste ? "Oui" : "Non",
+      ordonnance: formData.ordonnance ? "Oui" : "Non",
+    };
+  
+    // Choisir le Service ID et le Template ID en fonction du service
+    const serviceId = service === "gmail" ? "service_c1y8slf" : "service_jst9z0h";
+    const templateId = service === "gmail" ? "template_scjya2w" : "template_71cbpjk";
+  
+    // Envoyer l'email via EmailJS
+    emailjs
+      .send(
+        serviceId, // Service ID (Gmail ou Outlook)
+        templateId, // Template ID (Gmail ou Outlook)
+        templateParams, // Données du formulaire
+        "ZvJWK_QwBYJ9Wxbep" // User ID
+      )
+      .then(
+        (response) => {
+          setIsLoading(false);
+          Swal.fire({
+            icon: "success",
+            title: "Succès !",
+            text: "Email envoyé avec succès ! 😊",
+            confirmButtonText: "OK",
+          });
+          //console.log("Email envoyé avec succès !", response);
+          setSubmitted(true); // Afficher un message de succès
+        },
+        (error) => {
+          setIsLoading(false);
+          Swal.fire({
+            icon: "error",
+            title: "Erreur",
+            text: `Erreur lors de l'envoi de l'email 😞 : ${error.text}`,
+            confirmButtonText: "OK",
+          });
+          // console.error("Erreur lors de l'envoi de l'email :", error);
+        }
+      );
   };
 
   // Afficher le loader pendant 10 secondes
@@ -67,14 +114,10 @@ function Formulaire() {
     return (
       <Container className="d-flex justify-content-center align-items-center vh-100">
         <div className="loader">
-         
-            <span className="visually-hidden">Chargement...</span>
-      
+          <span className="visually-hidden">Chargement...</span>
         </div>
         <br />
-        
       </Container>
-      
     );
   }
 
@@ -106,7 +149,7 @@ function Formulaire() {
       </Alert>
 
       {submitted && (
-        <Alert variant="success" className="text-center">
+        <Alert variant="success" className="text-center mt-5">
           Votre demande de rendez-vous a été envoyée avec succès !
         </Alert>
       )}
@@ -160,7 +203,7 @@ function Formulaire() {
               />
             </Form.Group>
           </Col>
-          <Col md={6}>
+           <Col md={6}>
             <Form.Group controlId="email" className="mb-3">
               <Form.Label>
                 Email <span className="text-danger">*</span>
@@ -173,7 +216,7 @@ function Formulaire() {
                 required
               />
             </Form.Group>
-          </Col>
+          </Col> 
         </Row>
 
         {/* Motif de rendez-vous */}
@@ -220,38 +263,6 @@ function Formulaire() {
           />
         </Form.Group>
 
-        {/* Date et Heure */}
-        <Row>
-          <Col md={6}>
-            <Form.Group controlId="date" className="mb-3">
-              <Form.Label>
-                Date <span className="text-danger">*</span>
-              </Form.Label>
-              <Form.Control
-                type="date"
-                name="date"
-                value={formData.date}
-                onChange={handleChange}
-                required
-              />
-            </Form.Group>
-          </Col>
-          <Col md={6}>
-            <Form.Group controlId="heure" className="mb-3">
-              <Form.Label>
-                Heure <span className="text-danger">*</span>
-              </Form.Label>
-              <Form.Control
-                type="time"
-                name="heure"
-                value={formData.heure}
-                onChange={handleChange}
-                required
-              />
-            </Form.Group>
-          </Col>
-        </Row>
-
         {/* Checkboxes */}
         <Form.Group className="mb-3">
           <Form.Check
@@ -278,11 +289,26 @@ function Formulaire() {
           />
         </Form.Group>
 
+    
         {/* Bouton de soumission */}
         <div className="text-center">
-          <Button variant="primary" type="submit" className="btn-submit">
-            Envoyer la demande
-          </Button>
+        <Button variant="primary" type="submit" className="btn-submit" disabled={isLoading}>
+          {isLoading ? (
+            <>
+              <Spinner
+                as="span"
+                animation="border"
+                size="sm"
+                role="status"
+                aria-hidden="true"
+                className="me-2"
+              />
+              Envoi en cours...
+            </>
+          ) : (
+            "Envoyer la demande"
+          )}
+        </Button>
         </div>
       </Form>
     </Container>

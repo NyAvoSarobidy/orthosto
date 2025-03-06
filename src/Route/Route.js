@@ -1,16 +1,14 @@
- import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
- import Main  from "../pages/Main";
- import Formulaires  from "../pages/Formulaires";
- function MyRoute(){
+import { Route, Routes } from 'react-router-dom'; // Pas besoin de HashRouter ici
+import Main from "../pages/Main";
+import Formulaires from "../pages/Formulaires";
 
- return(
+function MyRoute() {
+  return (
+    <Routes>
+      <Route path="/" element={<Main />} />
+      <Route path="/Prendre-RDV" element={<Formulaires />} />
+    </Routes>
+  );
+}
 
-     <Routes>
-              <Route path="/Accueil" element={<Main />} />
-              <Route path="/Prendre-RDV" element={<Formulaires />} />
-     </Routes>
- );
-
- }
-
- export default MyRoute;
+export default MyRoute;

@@ -1,5 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from 'react-router-dom';
 import {
   faMapMarkerAlt,
   faPhone,
@@ -41,7 +42,12 @@ function Footer() {
                 <a href="/about" className="text-white text-decoration-none">Stomatogie</a>
               </li>
               <li className="mb-2">
-                <a href="/about" className="text-white text-decoration-none">Prendre un RDV</a>
+                
+                <Link
+                   target="_blank"
+                   to="https://www.doctolib.fr/stomatologue/mulhouse/tuncay-sahin/booking/motives?specialityId=25&telehealth=false&placeId=practice-228902&profile_skipped=true&bookingFunnelSource=external_referral"
+                    className="text-white text-decoration-none"
+                >Prendre un RDV</Link>
               </li>
               <li className="mb-2">
                 <a href="/contact" className="text-white text-decoration-none">Contact</a>
