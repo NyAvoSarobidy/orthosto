@@ -1,0 +1,62 @@
+/* Styles pour la page de contact */
+.container-fluid {
+    padding: 0;
+    margin: 0;
+}
+
+/* Section Horaire */
+.Horaire {
+    background-color: #f8f9fa; /* Couleur de fond légère */
+    padding: 50px 0;
+}
+
+/* Section ContactFormulaire */
+.bg-gradient-primary {
+    background-color: #ffffff; /* Fond blanc */
+    padding: 50px 0;
+}
+
+/* Ajustements pour les petits écrans */
+@media (max-width: 768px) {
+    .Horaire {
+        padding: 30px 0;
+    }
+
+    .bg-gradient-primary {
+        padding: 30px 0;
+    }
+
+    .horaire-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .horaire-content {
+        font-size: 1rem;
+    }
+
+    .form-control-user, .btn-user {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .Horaire {
+        padding: 20px 0;
+    }
+
+    .bg-gradient-primary {
+        padding: 20px 0;
+    }
+
+    .horaire-header h1 {
+        font-size: 1.2rem;
+    }
+
+    .horaire-content {
+        font-size: 0.9rem;
+    }
+
+    .form-control-user, .btn-user {
+        font-size: 0.8rem;
+    }
+}

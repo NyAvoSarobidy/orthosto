@@ -1,0 +1,57 @@
+/* Style général pour la carte */
+.card {
+    border-radius: 10px; /* Coins arrondis */
+    overflow: hidden; /* Pour éviter que l'image ne dépasse */
+}
+
+/* Style pour l'image */
+.card img {
+    width: 100%; /* Largeur de l'image */
+    height: 100%; /* Hauteur de l'image */
+    object-fit: cover; /* Pour couvrir toute la zone */
+}
+
+/* Style pour le texte */
+.card-body {
+    padding: 2rem; /* Espacement interne */
+}
+
+.card-body h1 {
+    font-size: 1.5rem; /* Taille du titre */
+    font-weight: bold; /* Texte en gras */
+    margin-bottom: 1rem; /* Espacement en bas */
+}
+
+.card-body p {
+    font-size: 1rem; /* Taille du texte */
+    line-height: 1.6; /* Interligne */
+    margin-bottom: 1.5rem; /* Espacement en bas */
+}
+
+.card-body hr {
+    border-top: 2px solid #dc3545; /* Couleur et épaisseur de la ligne */
+    margin: 1.5rem 0; /* Espacement autour de la ligne */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card-body {
+        padding: 1rem; /* Réduire l'espacement interne sur mobile */
+    }
+
+    .card-body h1 {
+        font-size: 1.25rem; /* Réduire la taille du titre sur mobile */
+    }
+
+    .card-body p {
+        font-size: 0.9rem; /* Réduire la taille du texte sur mobile */
+    }
+
+    .col-lg-5.d-none.d-lg-block {
+        display: none; /* Masquer l'image sur les petits écrans */
+    }
+
+    .col-lg-7 {
+        padding: 1rem; /* Ajouter un espacement interne sur mobile */
+    }
+}

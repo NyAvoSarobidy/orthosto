@@ -1,0 +1,50 @@
+/* Style général pour la section adulte */
+.adulte {
+    padding: 20px 0;
+}
+
+/* Style pour les titres */
+.adulte h4 {
+    font-size: 1.5rem; /* Taille du titre */
+    margin-bottom: 1rem; /* Espacement en bas */
+}
+
+/* Style pour les paragraphes */
+.adulte p {
+    font-size: 1rem; /* Taille du texte */
+    line-height: 1.6; /* Interligne */
+    margin-bottom: 1.5rem; /* Espacement en bas */
+}
+
+/* Style pour les listes */
+.adulte ol, .adulte ul {
+    margin-left: 1.5rem; /* Marge à gauche pour les listes */
+    margin-bottom: 1.5rem; /* Espacement en bas */
+}
+
+.adulte li {
+    margin-bottom: 0.5rem; /* Espacement entre les éléments de la liste */
+}
+
+/* Style pour les images */
+.adulte img {
+    max-width: 100%; /* Image responsive */
+    height: auto; /* Conserve le ratio de l'image */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .adulte h4 {
+        font-size: 1.25rem; /* Réduire la taille du titre sur mobile */
+    }
+
+    .adulte p {
+        font-size: 0.9rem; /* Réduire la taille du texte sur mobile */
+    }
+
+    .adulte ol, .adulte ul {
+        margin-left: 1rem; /* Réduire la marge des listes sur mobile */
+    }
+}

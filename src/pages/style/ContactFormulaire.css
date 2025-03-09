@@ -1,0 +1,78 @@
+.bg-gradient-primary {
+   background-color: whitesmoke;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.blala {
+    border-radius: 15px;
+    overflow: hidden;
+}
+              
+.bg-register-image {
+     background:linear-gradient(rgba(80, 79, 79, 0.5), rgba(129, 128, 128, 0.5)),url('../Elements/image/cont.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.blalabla {
+    padding: 0;
+}
+
+.p-5 {
+    padding: 3rem !important;
+}
+
+.form-control-user {
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+}
+
+.btn-user {
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+}
+
+
+
+
+.text-gray-900 {
+    color: #2d3748;
+}
+
+.small {
+    font-size: 0.875rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .p-5 {
+        padding: 2rem !important;
+    }
+
+    .form-control-user, .btn-user {
+        font-size: 0.8rem;
+    }
+
+    .bg-register-image {
+        display: none;
+    }
+
+    .col-lg-7 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .p-5 {
+        padding: 1.5rem !important;
+    }
+
+    .form-control-user, .btn-user {
+        font-size: 0.75rem;
+    }
+}

@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Container, Form, Button, Row, Col, Alert, Spinner } from "react-bootstrap";
 import { FaInfoCircle, FaExclamationTriangle } from "react-icons/fa"; // Icônes pour la remarque
 import emailjs from "emailjs-com"; // Importer EmailJS
-import Swal from "sweetalert2";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../style/Formulaire.css"; // Fichier CSS personnalisé
 
@@ -22,7 +23,7 @@ function Formulaire() {
     service: "gmail", // Par défaut, utiliser Gmail
   });
   const [submitted, setSubmitted] = useState(false); // État pour afficher un message de succès
-  const [isLoading, setIsLoading] = useState(false);
+
 
   // Simuler un chargement de 10 secondes
   useEffect(() => {
@@ -45,7 +46,7 @@ function Formulaire() {
   // Gestion de la soumission du formulaire avec EmailJS
   const handleSubmit = (e) => {
     e.preventDefault();
-    setIsLoading(true);
+   
 
     const getServiceByEmail = (email) => {
       if (email.includes("@gmail.com")) {
@@ -74,7 +75,7 @@ function Formulaire() {
   
     // Choisir le Service ID et le Template ID en fonction du service
     const serviceId = service === "gmail" ? "service_c1y8slf" : "service_jst9z0h";
-    const templateId = service === "gmail" ? "template_scjya2w" : "template_71cbpjk";
+    const templateId = service === "gmail" ? "template_scjya2w" : "template_scjya2w";
   
     // Envoyer l'email via EmailJS
     emailjs
@@ -86,23 +87,29 @@ function Formulaire() {
       )
       .then(
         (response) => {
-          setIsLoading(false);
-          Swal.fire({
-            icon: "success",
-            title: "Succès !",
-            text: "Email envoyé avec succès ! 😊",
-            confirmButtonText: "OK",
+         
+          toast.success("Email envoyé avec succès ! 😊", {
+            position: "top-right",
+            autoClose: 5000, // Fermer automatiquement après 5 secondes
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
           });
           //console.log("Email envoyé avec succès !", response);
           setSubmitted(true); // Afficher un message de succès
         },
         (error) => {
-          setIsLoading(false);
-          Swal.fire({
-            icon: "error",
-            title: "Erreur",
-            text: `Erreur lors de l'envoi de l'email 😞 : ${error.text}`,
-            confirmButtonText: "OK",
+        
+          toast.error(`Erreur lors de l'envoi de l'email 😞 : ${error.text}`, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
           });
           // console.error("Erreur lors de l'envoi de l'email :", error);
         }
@@ -123,7 +130,9 @@ function Formulaire() {
 
   // Afficher le formulaire après le chargement
   return (
+    
     <Container className="my-5">
+       <ToastContainer />
       <h2 className="text-danger mb-4 pt-4">Prendre un rendez-vous</h2>
 
       {/* Section de remarque */}
@@ -292,22 +301,9 @@ function Formulaire() {
     
         {/* Bouton de soumission */}
         <div className="text-center">
-        <Button variant="primary" type="submit" className="btn-submit" disabled={isLoading}>
-          {isLoading ? (
-            <>
-              <Spinner
-                as="span"
-                animation="border"
-                size="sm"
-                role="status"
-                aria-hidden="true"
-                className="me-2"
-              />
-              Envoi en cours...
-            </>
-          ) : (
-            "Envoyer la demande"
-          )}
+        <Button variant="primary" type="submit" className="btn-submit" >
+               Envoyer la demande
+        
         </Button>
         </div>
       </Form>

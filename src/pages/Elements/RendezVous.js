@@ -1,5 +1,6 @@
 import React from "react";
 import '../style/RendezVous.css';
+import { Link } from 'react-router-dom';
 
 function RendezVous() {
     return (
@@ -21,20 +22,22 @@ function RendezVous() {
                 </div>
                 <div className="row justify-content-center mt-4">
                     <div className="col-12 col-md-auto mb-2 mb-md-0">
-                        <a href="" className="btn btn-outline-primary w-100 btn-hover">
+                        <Link to="/Orthodontie" className="btn btn-outline-primary w-100 btn-hover">
                             <i className="fas fa-tooth me-2"></i>
                             ORTHODONTIE
-                        </a>
+                        </Link>
                     </div>
                     <div className="col-12 col-md-auto">
-                        <a href="" className="btn btn-outline-danger w-100 btn-hover">
+                        <Link to="/Stomatologie" className="btn btn-outline-danger w-100 btn-hover">
                             <i className="fas fa-heart me-2"></i>
                             STOMATOLOGIE
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>
         </div>
+
+        
     );
 }
 

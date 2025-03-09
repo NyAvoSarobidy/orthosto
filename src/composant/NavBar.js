@@ -33,15 +33,15 @@ function NavBar(){
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#">
-                      <i className="fas fa-tooth me-2"></i> Orthodonte
-                    </a>
+                    <Link className="nav-link" to="/Orthodontie">
+                      <i className="fas fa-tooth me-2"></i> Orthodontie
+                    </Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#">
+                    <Link className="nav-link" to="/Stomatologie">
                   
-                      <i className="fas fa-heart me-2"></i> Stomalogie
-                    </a>
+                      <i className="fas fa-heart me-2"></i> Stomatologie
+                    </Link>
                   </li>
                   <li className="nav-item">
                     <Link className="nav-link" 
@@ -51,9 +51,9 @@ function NavBar(){
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#">
+                    <Link className="nav-link" to="/Contact">
                       <i className="fas fa-phone-alt me-2"></i> Contact
-                    </a>
+                    </Link>
                   </li>
                 </ul>
                 </div>

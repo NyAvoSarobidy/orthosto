@@ -1,0 +1,13 @@
+.sto {
+    width: 100%;
+    height: 70vh; /* Utilisez toute la hauteur de la vue */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(2, 2, 2, 0.5)),
+                url('../Elements/image/sto2.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 20px 0;
+  }
+  

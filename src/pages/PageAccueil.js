@@ -14,7 +14,7 @@ function PageAccueil(){
     return(
     
         <>
-             <Body />
+            <Body />
             <Carte />
             <Apropos />
             <RendezVous />

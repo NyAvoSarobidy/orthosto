@@ -34,9 +34,9 @@ function Body() {
                         </Link>
                     </div>
                     <div className="col-12 col-md-auto">
-                        <a href="" className="btn btn-primary w-100 fw-bold py-3">
+                        <Link to="/Contact" className="btn btn-primary w-100 fw-bold py-3">
                             <i className="fas fa-phone-alt me-2"></i> CONTACT
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

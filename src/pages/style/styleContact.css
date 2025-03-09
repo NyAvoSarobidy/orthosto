@@ -1,0 +1,173 @@
+.contact {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(2, 2, 2, 0.5)),
+              url('../Elements/image/Contact2.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 20px 0;
+}
+
+.name {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+}
+
+.contact-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-icon {
+  font-size: 2.5rem;
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+.contact-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.contact-info {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Section DOCTEUR */
+.doctor-section {
+  position: relative;
+  margin-top: -50px;
+  z-index: 1;
+}
+
+.doctor-section .card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.doctor-section .fa-user-doctor {
+  color: #dc3545; /* Couleur rouge pour l'icône */
+}
+
+.doctor-section .doctor-nam {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.doctor-section hr {
+  border-top: 2px solid #333;
+  width: 50%;
+  margin: 10px auto;
+}
+
+.doctor-section p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .name {
+    font-size: 2rem;
+  }
+
+  .contact-card {
+    margin: 10px 0;
+  }
+
+  .contact-icon {
+    font-size: 2rem;
+  }
+
+  .contact-title {
+    font-size: 1.2rem;
+  }
+
+  .contact-info {
+    font-size: 1rem;
+  }
+
+  .doctor-section {
+    margin-top: -30px;
+  }
+
+  .doctor-section .card {
+    padding: 15px;
+  }
+
+  .doctor-section .fa-user-doctor {
+    font-size: 4rem;
+  }
+
+  .doctor-section .doctor-nam {
+    font-size: 1.2rem;
+  }
+
+  .doctor-section p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .name {
+    font-size: 1.5rem;
+  }
+
+  .contact-card {
+    padding: 15px;
+  }
+
+  .contact-icon {
+    font-size: 1.5rem;
+  }
+
+  .contact-title {
+    font-size: 1rem;
+  }
+
+  .contact-info {
+    font-size: 0.9rem;
+  }
+
+  .doctor-section {
+    margin-top: -20px;
+  }
+
+  .doctor-section .card {
+    padding: 10px;
+  }
+
+  .doctor-section .fa-user-doctor {
+    font-size: 3rem;
+  }
+
+  .doctor-section .doctor-nam {
+    font-size: 1rem;
+  }
+
+  .doctor-section p {
+    font-size: 0.9rem;
+  }
+}

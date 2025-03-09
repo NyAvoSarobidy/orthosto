@@ -33,13 +33,13 @@ function Footer() {
             <h5 className="text-uppercase mb-4">Liens utiles</h5>
             <ul className="list-unstyled">
               <li className="mb-2">
-                <a href="/" className="text-white text-decoration-none">Accueil</a>
+                <Link to="/" className="text-white text-decoration-none">Accueil</Link>
               </li>
               <li className="mb-2">
-                <a href="/services" className="text-white text-decoration-none">Orthodonte</a>
+                <Link to="/Orthodontie" className="text-white text-decoration-none">Orthodonte</Link>
               </li>
               <li className="mb-2">
-                <a href="/about" className="text-white text-decoration-none">Stomatogie</a>
+                <Link to="/Stomatologie" className="text-white text-decoration-none">Stomatogie</Link>
               </li>
               <li className="mb-2">
                 
@@ -50,7 +50,7 @@ function Footer() {
                 >Prendre un RDV</Link>
               </li>
               <li className="mb-2">
-                <a href="/contact" className="text-white text-decoration-none">Contact</a>
+                <Link to="/Contact" className="text-white text-decoration-none">Contact</Link>
               </li>
             </ul>
           </div>
@@ -65,7 +65,7 @@ function Footer() {
               </li>
               <li className="mb-3">
                 <FontAwesomeIcon icon={faPhone} className="me-2" />
-                +03 89 66 01 16 - +07 69 52 06 29
+                +03 89 66 01 16 - +07 83 35 01 24
               </li>
               <li className="mb-3">
                 <FontAwesomeIcon icon={faEnvelope} className="me-2" />

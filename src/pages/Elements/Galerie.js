@@ -13,7 +13,7 @@ function Galerie() {
     const images = [s1, s2, s3, s4, s5, s6, s7, s8]; // Tableau des images
 
     return (
-        <div id="Galerie" className="mt-5 py-5 bg-light"> {/* Ajout de padding et fond clair */}
+        <div id="Galerie" className="mt-5 py-5 "> {/* Ajout de padding et fond clair */}
             <div className="container">
                 <h2 className="text-center mb-4 fw-bold">Galerie</h2>
                 <p className="text-center lead mb-5">Des sourires éclatants, des soins bienveillants : explorez nos réalisations.</p>

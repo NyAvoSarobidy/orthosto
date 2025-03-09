@@ -1,0 +1,70 @@
+
+  .bca:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .image-card {
+    margin-bottom: 20px; /* Espace entre l'image et le texte sur mobile */
+  }
+  
+  .image-card img {
+    border-radius: 10px;
+  }
+  
+  /* Réduire la taille de l'image */
+  .smaller-image {
+    max-width: 70%; /* Ajustez cette valeur selon vos besoins */
+    height: auto; /* Conserve le ratio d'aspect */
+  }
+  
+  .horaire-header {
+    margin-bottom: 20px;
+  }
+  
+  .horaire-header h1 {
+    font-size: 1.0rem;
+    font-weight: bold;
+    color: #333;
+    display: inline-block;
+  }
+  
+  .horaire-header i {
+    font-size: 0.9rem;
+    color: #000000; /* Couleur bleue pour l'icône */
+  }
+  
+  .horaire-content {
+    font-size: 1.0rem;
+    color: #555;
+    line-height: 1.1;
+  }
+  
+  .horaire-content p {
+    margin-bottom: 10px;
+  }
+  
+  .horaire-content strong {
+    color: #000000; /* Couleur bleue pour les jours */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .horaire-header h1 {
+      font-size: 2rem;
+    }
+  
+    .horaire-content {
+      font-size: 1rem;
+    }
+  
+    .image-card {
+      margin-bottom: 20px;
+    }
+  
+    .smaller-image {
+      max-width: 80%; /* L'image est un peu plus petite sur mobile */
+    }
+  }
+
+  
