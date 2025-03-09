@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Test-deploye/static/css/main.d0a87712.css",
-    "main.js": "/Test-deploye/static/js/main.cb67fe61.js",
+    "main.js": "/Test-deploye/static/js/main.0baa0229.js",
     "static/js/453.87558a91.chunk.js": "/Test-deploye/static/js/453.87558a91.chunk.js",
     "static/media/ado3.jpg": "/Test-deploye/static/media/ado3.722215e8ec10e8339cca.jpg",
     "static/media/1.jpg": "/Test-deploye/static/media/1.2e7b4b612e7b96832e73.jpg",
@@ -23,13 +23,12 @@
     "static/media/s2.jpg": "/Test-deploye/static/media/s2.56243a16914d41a3c2f2.jpg",
     "static/media/s1.jpg": "/Test-deploye/static/media/s1.330811152592330a62ae.jpg",
     "static/media/sto3.jpg": "/Test-deploye/static/media/sto3.3333386a5644c802582b.jpg",
+    "static/media/photoBrackets.jpg": "/Test-deploye/static/media/photoBrackets.94586b7a4cd2540dc6ae.jpg",
     "static/media/2.jpg": "/Test-deploye/static/media/2.3b374831824438159513.jpg",
     "static/media/ortho-7.jpg": "/Test-deploye/static/media/ortho-7.3b374831824438159513.jpg",
     "static/media/image.png": "/Test-deploye/static/media/image.6b000405cc359afc3409.png",
-    "static/media/ado1.jpg": "/Test-deploye/static/media/ado1.82cb3f68c8fa14a35982.jpg",
     "static/media/Enf1.jpg": "/Test-deploye/static/media/Enf1.d53bf1ff2da0be08e30d.jpg",
     "static/media/Enf2.jpg": "/Test-deploye/static/media/Enf2.c62b3a2f33447e0ef806.jpg",
-    "static/media/Ortho5.jpg": "/Test-deploye/static/media/Ortho5.5ac860226474bdf22959.jpg",
     "static/media/ado2.jpg": "/Test-deploye/static/media/ado2.d68c4d9707dbd3fbd763.jpg",
     "static/media/Enf5.jpg": "/Test-deploye/static/media/Enf5.1bebd93d2e4139284096.jpg",
     "static/media/Outils.jpg": "/Test-deploye/static/media/Outils.9199a0cfb0ea63febcb7.jpg",
@@ -41,6 +40,7 @@
     "static/media/fa-solid-900.woff2": "/Test-deploye/static/media/fa-solid-900.2463b90d9a316e4e5294.woff2",
     "static/media/invisalign.jpg": "/Test-deploye/static/media/invisalign.6a5c2073164931b2e4c3.jpg",
     "static/media/fa-brands-400.woff2": "/Test-deploye/static/media/fa-brands-400.c210719e60948b211a12.woff2",
+    "static/media/ado1.jpg": "/Test-deploye/static/media/ado1.ad1860b07bcefc925d95.jpg",
     "static/media/fa-regular-400.ttf": "/Test-deploye/static/media/fa-regular-400.914997e1bdfc990d0897.ttf",
     "static/media/Font-2.jpg": "/Test-deploye/static/media/Font-2.32f6ea8f0b44e60805ec.jpg",
     "static/media/fa-regular-400.woff2": "/Test-deploye/static/media/fa-regular-400.89999bdf5d835c012025.woff2",
@@ -55,11 +55,11 @@
     "static/media/slick.woff": "/Test-deploye/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Test-deploye/index.html",
     "main.d0a87712.css.map": "/Test-deploye/static/css/main.d0a87712.css.map",
-    "main.cb67fe61.js.map": "/Test-deploye/static/js/main.cb67fe61.js.map",
+    "main.0baa0229.js.map": "/Test-deploye/static/js/main.0baa0229.js.map",
     "453.87558a91.chunk.js.map": "/Test-deploye/static/js/453.87558a91.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d0a87712.css",
-    "static/js/main.cb67fe61.js"
+    "static/js/main.0baa0229.js"
   ]
 }
