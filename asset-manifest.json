@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Test-deploye/static/css/main.d035d396.css",
-    "main.js": "/Test-deploye/static/js/main.22165d50.js",
+    "main.css": "/Test-deploye/static/css/main.d0a87712.css",
+    "main.js": "/Test-deploye/static/js/main.cb67fe61.js",
     "static/js/453.87558a91.chunk.js": "/Test-deploye/static/js/453.87558a91.chunk.js",
     "static/media/ado3.jpg": "/Test-deploye/static/media/ado3.722215e8ec10e8339cca.jpg",
     "static/media/1.jpg": "/Test-deploye/static/media/1.2e7b4b612e7b96832e73.jpg",
@@ -15,12 +15,14 @@
     "static/media/s7.jpg": "/Test-deploye/static/media/s7.9dd038351c4ad727bb12.jpg",
     "static/media/Ortho3.jpg": "/Test-deploye/static/media/Ortho3.f854ae2720d8c8f74a4c.jpg",
     "static/media/Enf3.jpg": "/Test-deploye/static/media/Enf3.50f9de75a68cb74bf5f6.jpg",
+    "static/media/sto2.jpg": "/Test-deploye/static/media/sto2.a0a55e7fef0aee70dc6a.jpg",
     "static/media/s6.jpg": "/Test-deploye/static/media/s6.5237a379596ed397d72e.jpg",
     "static/media/app.jpg": "/Test-deploye/static/media/app.f04789197a691e0d9aee.jpg",
     "static/media/Back.jpg": "/Test-deploye/static/media/Back.e0343e43ecfdb10d508d.jpg",
     "static/media/s4.jpg": "/Test-deploye/static/media/s4.ba598cd5916c5d134d4b.jpg",
     "static/media/s2.jpg": "/Test-deploye/static/media/s2.56243a16914d41a3c2f2.jpg",
     "static/media/s1.jpg": "/Test-deploye/static/media/s1.330811152592330a62ae.jpg",
+    "static/media/sto3.jpg": "/Test-deploye/static/media/sto3.3333386a5644c802582b.jpg",
     "static/media/2.jpg": "/Test-deploye/static/media/2.3b374831824438159513.jpg",
     "static/media/ortho-7.jpg": "/Test-deploye/static/media/ortho-7.3b374831824438159513.jpg",
     "static/media/image.png": "/Test-deploye/static/media/image.6b000405cc359afc3409.png",
@@ -52,12 +54,12 @@
     "static/media/slick.ttf": "/Test-deploye/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/Test-deploye/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Test-deploye/index.html",
-    "main.d035d396.css.map": "/Test-deploye/static/css/main.d035d396.css.map",
-    "main.22165d50.js.map": "/Test-deploye/static/js/main.22165d50.js.map",
+    "main.d0a87712.css.map": "/Test-deploye/static/css/main.d0a87712.css.map",
+    "main.cb67fe61.js.map": "/Test-deploye/static/js/main.cb67fe61.js.map",
     "453.87558a91.chunk.js.map": "/Test-deploye/static/js/453.87558a91.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d035d396.css",
-    "static/js/main.22165d50.js"
+    "static/css/main.d0a87712.css",
+    "static/js/main.cb67fe61.js"
   ]
 }
