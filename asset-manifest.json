@@ -1,9 +1,8 @@
 {
   "files": {
     "main.css": "/Test-deploye/static/css/main.d0a87712.css",
-    "main.js": "/Test-deploye/static/js/main.0baa0229.js",
+    "main.js": "/Test-deploye/static/js/main.4e8d3aa9.js",
     "static/js/453.87558a91.chunk.js": "/Test-deploye/static/js/453.87558a91.chunk.js",
-    "static/media/ado3.jpg": "/Test-deploye/static/media/ado3.722215e8ec10e8339cca.jpg",
     "static/media/1.jpg": "/Test-deploye/static/media/1.2e7b4b612e7b96832e73.jpg",
     "static/media/s3.jpg": "/Test-deploye/static/media/s3.f162027c7e7dbcbdda7a.jpg",
     "static/media/cont.jpg": "/Test-deploye/static/media/cont.cb78a8996d2055320dbd.jpg",
@@ -24,12 +23,13 @@
     "static/media/s1.jpg": "/Test-deploye/static/media/s1.330811152592330a62ae.jpg",
     "static/media/sto3.jpg": "/Test-deploye/static/media/sto3.3333386a5644c802582b.jpg",
     "static/media/photoBrackets.jpg": "/Test-deploye/static/media/photoBrackets.94586b7a4cd2540dc6ae.jpg",
+    "static/media/ado4.jpg": "/Test-deploye/static/media/ado4.2d2a3352887e89e0e3f5.jpg",
     "static/media/2.jpg": "/Test-deploye/static/media/2.3b374831824438159513.jpg",
     "static/media/ortho-7.jpg": "/Test-deploye/static/media/ortho-7.3b374831824438159513.jpg",
     "static/media/image.png": "/Test-deploye/static/media/image.6b000405cc359afc3409.png",
+    "static/media/Ado6.jpg": "/Test-deploye/static/media/Ado6.f7ca54b49931964fb89d.jpg",
     "static/media/Enf1.jpg": "/Test-deploye/static/media/Enf1.d53bf1ff2da0be08e30d.jpg",
     "static/media/Enf2.jpg": "/Test-deploye/static/media/Enf2.c62b3a2f33447e0ef806.jpg",
-    "static/media/ado2.jpg": "/Test-deploye/static/media/ado2.d68c4d9707dbd3fbd763.jpg",
     "static/media/Enf5.jpg": "/Test-deploye/static/media/Enf5.1bebd93d2e4139284096.jpg",
     "static/media/Outils.jpg": "/Test-deploye/static/media/Outils.9199a0cfb0ea63febcb7.jpg",
     "static/media/fa-solid-900.ttf": "/Test-deploye/static/media/fa-solid-900.2582b0e4bcf85eceead0.ttf",
@@ -55,11 +55,11 @@
     "static/media/slick.woff": "/Test-deploye/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Test-deploye/index.html",
     "main.d0a87712.css.map": "/Test-deploye/static/css/main.d0a87712.css.map",
-    "main.0baa0229.js.map": "/Test-deploye/static/js/main.0baa0229.js.map",
+    "main.4e8d3aa9.js.map": "/Test-deploye/static/js/main.4e8d3aa9.js.map",
     "453.87558a91.chunk.js.map": "/Test-deploye/static/js/453.87558a91.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d0a87712.css",
-    "static/js/main.0baa0229.js"
+    "static/js/main.4e8d3aa9.js"
   ]
 }
