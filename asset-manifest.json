@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Test-deploye/static/css/main.f9098776.css",
-    "main.js": "/Test-deploye/static/js/main.740983c0.js",
+    "main.js": "/Test-deploye/static/js/main.500a8a89.js",
     "static/js/453.87558a91.chunk.js": "/Test-deploye/static/js/453.87558a91.chunk.js",
     "static/media/1.jpg": "/Test-deploye/static/media/1.2e7b4b612e7b96832e73.jpg",
     "static/media/s3.jpg": "/Test-deploye/static/media/s3.f162027c7e7dbcbdda7a.jpg",
@@ -14,15 +14,16 @@
     "static/media/Ortho1.jpg": "/Test-deploye/static/media/Ortho1.40272e2b2c986f542a39.jpg",
     "static/media/s7.jpg": "/Test-deploye/static/media/s7.9dd038351c4ad727bb12.jpg",
     "static/media/Ortho3.jpg": "/Test-deploye/static/media/Ortho3.f854ae2720d8c8f74a4c.jpg",
+    "static/media/StoChir.jpg": "/Test-deploye/static/media/StoChir.79cb95fcdf5c157f4d82.jpg",
     "static/media/Enf3.jpg": "/Test-deploye/static/media/Enf3.50f9de75a68cb74bf5f6.jpg",
     "static/media/sto2.jpg": "/Test-deploye/static/media/sto2.a0a55e7fef0aee70dc6a.jpg",
+    "static/media/oRTHOFE.jpg": "/Test-deploye/static/media/oRTHOFE.51ca8dff9744caa008fe.jpg",
     "static/media/s6.jpg": "/Test-deploye/static/media/s6.5237a379596ed397d72e.jpg",
     "static/media/app.jpg": "/Test-deploye/static/media/app.f04789197a691e0d9aee.jpg",
     "static/media/Back.jpg": "/Test-deploye/static/media/Back.e0343e43ecfdb10d508d.jpg",
     "static/media/s4.jpg": "/Test-deploye/static/media/s4.ba598cd5916c5d134d4b.jpg",
     "static/media/s2.jpg": "/Test-deploye/static/media/s2.56243a16914d41a3c2f2.jpg",
     "static/media/s1.jpg": "/Test-deploye/static/media/s1.330811152592330a62ae.jpg",
-    "static/media/prat sto.jpg": "/Test-deploye/static/media/prat sto.3ed946f5650b7a7f67a8.jpg",
     "static/media/sto3.jpg": "/Test-deploye/static/media/sto3.3333386a5644c802582b.jpg",
     "static/media/photoBrackets.jpg": "/Test-deploye/static/media/photoBrackets.94586b7a4cd2540dc6ae.jpg",
     "static/media/ado4.jpg": "/Test-deploye/static/media/ado4.2d2a3352887e89e0e3f5.jpg",
@@ -46,7 +47,6 @@
     "static/media/ado1.jpg": "/Test-deploye/static/media/ado1.ad1860b07bcefc925d95.jpg",
     "static/media/fa-regular-400.ttf": "/Test-deploye/static/media/fa-regular-400.914997e1bdfc990d0897.ttf",
     "static/media/Font-2.jpg": "/Test-deploye/static/media/Font-2.32f6ea8f0b44e60805ec.jpg",
-    "static/media/Praticien Ortho.jpg": "/Test-deploye/static/media/Praticien Ortho.440d331d2faf69520b4d.jpg",
     "static/media/hiring.jpg": "/Test-deploye/static/media/hiring.eeee5c8f234c1b2afd5f.jpg",
     "static/media/fa-regular-400.woff2": "/Test-deploye/static/media/fa-regular-400.89999bdf5d835c012025.woff2",
     "static/media/cab3.jpeg": "/Test-deploye/static/media/cab3.d3c0b90bcf851693b163.jpeg",
@@ -60,11 +60,11 @@
     "static/media/slick.woff": "/Test-deploye/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Test-deploye/index.html",
     "main.f9098776.css.map": "/Test-deploye/static/css/main.f9098776.css.map",
-    "main.740983c0.js.map": "/Test-deploye/static/js/main.740983c0.js.map",
+    "main.500a8a89.js.map": "/Test-deploye/static/js/main.500a8a89.js.map",
     "453.87558a91.chunk.js.map": "/Test-deploye/static/js/453.87558a91.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f9098776.css",
-    "static/js/main.740983c0.js"
+    "static/js/main.500a8a89.js"
   ]
 }
