@@ -1,7 +1,7 @@
 import React from "react";
 import Image1 from './image/Ortho1.jpg'; // Remplacez par vos images
 import Image3 from './image/Ortho3.jpg';
-import Image5 from './image/Ortho5.jpg';
+import Image5 from './image/ado1.jpg';
 import "../style/StylePageOtho.css";
 
 function PageOrthodontie() {

@@ -47,7 +47,9 @@ function OrthoEnfants() {
 
                                 <hr className="text-danger"/>
                                 <p className="text-gray-900 mb-4">
-    Ceci permet de corriger les problèmes de croissance des mâchoires qui compromettent d’emblée l’alignement dentaire et la bonne santé de la mâchoire. L’alignement dentaire se fait plus tard avec les gouttières Invisalign, ou les bagues et brackets, 
+    Ceci permet de corriger les problèmes de croissance des mâchoires qui compromettent
+     d’emblée l’alignement dentaire et la bonne santé de la mâchoire. 
+     L’alignement dentaire se fait plus tard avec les gouttières d'alignement, ou les brackets, 
     qui peuvent être en céramique ou métal.
 </p>
 

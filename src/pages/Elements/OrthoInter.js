@@ -27,12 +27,6 @@ function OrthoInter() {
                                 commencer les traitements entre <strong>6 et 9 ans</strong> afin de les remettre dans un bon schéma de croissance et éviter des traitements par bagues trop longs.
                             </p>
 
-                            <hr className="border-danger my-4"/>
-
-                            <p className="text-secondary fs-6">
-                                Nous utilisons le plus souvent des appareillages simples pour les plus petits et pour les enfants de <strong>8-9 ans</strong>, 
-                                nous préconisons une phase d'interception rapide de 6 mois à l'aide de bagues orthodontiques.
-                            </p>
                         </div>
                     </div>
                 </div>

@@ -81,10 +81,7 @@ function ContactFormulaire() {
                                                 <div className="form-group">
                                                     <label htmlFor="nom" className="form-label">Nom *</label>
                                                     <div className="input-group">
-                                                        <span className="input-group-text">
-                                                            <i className="fas fa-user"></i>
-                                                        </span>
-                                                        <input
+                                                       <input
                                                             type="text"
                                                             className="form-control"
                                                             name="nom"
@@ -98,10 +95,7 @@ function ContactFormulaire() {
                                                 <div className="form-group">
                                                     <label htmlFor="prenom" className="form-label">Prénom *</label>
                                                     <div className="input-group">
-                                                        <span className="input-group-text">
-                                                            <i className="fas fa-user"></i>
-                                                        </span>
-                                                        <input
+                                                      <input
                                                             type="text"
                                                             className="form-control"
                                                             name="prenom"
@@ -117,9 +111,7 @@ function ContactFormulaire() {
                                         <div className="form-group mb-3">
                                             <label htmlFor="email" className="form-label">Email *</label>
                                             <div className="input-group">
-                                                <span className="input-group-text">
-                                                    <i className="fas fa-envelope"></i>
-                                                </span>
+                                               
                                                 <input
                                                     type="email"
                                                     className="form-control"
@@ -134,10 +126,7 @@ function ContactFormulaire() {
                                         <div className="form-group mb-3">
                                             <label htmlFor="telephone" className="form-label">Téléphone *</label>
                                             <div className="input-group">
-                                                <span className="input-group-text">
-                                                    <i className="fas fa-phone"></i>
-                                                </span>
-                                                <input
+                                              <input
                                                     type="tel"
                                                     className="form-control"
                                                     name="telephone"
@@ -151,10 +140,7 @@ function ContactFormulaire() {
                                         <div className="form-group mb-4">
                                             <label htmlFor="message" className="form-label">Message *</label>
                                             <div className="input-group">
-                                                <span className="input-group-text">
-                                                    <i className="fas fa-comment"></i>
-                                                </span>
-                                                <textarea
+                                               <textarea
                                                     className="form-control"
                                                     name="message"
                                                     rows="5"

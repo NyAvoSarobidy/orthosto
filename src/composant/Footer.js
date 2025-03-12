@@ -52,6 +52,9 @@ function Footer() {
               <li className="mb-2">
                 <Link to="/Contact" className="text-white text-decoration-none">Contact</Link>
               </li>
+              <li className="mb-2">
+                <Link to="/Recrutement" className="text-white text-decoration-none">Recrutement</Link>
+              </li>
             </ul>
           </div>
 

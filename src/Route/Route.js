@@ -5,6 +5,10 @@ import PageContact from "../pages/Contact";
 import Orthodontie from "../pages/Orthodontie";
 import Stomatologie from "../pages/Stomatologie";
 
+import Enquete from "../pages/Enquete"
+import Recrutement from "../pages/recrutement"
+
+
 
 function MyRoute() {
   return (
@@ -14,6 +18,8 @@ function MyRoute() {
       <Route path="/Contact" element={<PageContact />} />
       <Route path="/Orthodontie" element={<Orthodontie />} />
       <Route path="/Stomatologie" element={<Stomatologie />} />
+      <Route path="/Enquete" element={<Enquete />} />
+      <Route path="/Recrutement" element={<Recrutement />} />
       
     </Routes>
   );

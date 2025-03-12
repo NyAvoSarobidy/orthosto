@@ -55,31 +55,18 @@ function NavBar(){
                       <i className="fas fa-phone-alt me-2"></i> Contact
                     </Link>
                   </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/Recrutement">
+                    <i className="fas fa-briefcase me-2"></i> Recrutement
+                    </Link>
+                  </li>
+            
+
+                  
                 </ul>
                 </div>
             
-                {/* <div className="dropdown">
-                  <button 
-                    className="btn btn-light dropdown-toggle " 
-                    type="button" 
-                    id="languageDropdown" 
-                    data-bs-toggle="dropdown" 
-                    aria-expanded="false ">
-                    <i className="fas fa-globe me-2 "></i> Langue
-                  </button>
-                  <ul className="dropdown-menu" aria-labelledby="languageDropdown">
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/320px-Flag_of_Germany.svg.png" alt="German Flag" width="20" className="me-2" /> Allemand
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/320px-Flag_of_the_United_States.svg.png" alt="US Flag" width="20" className="me-2" /> Anglais
-                      </a>
-                    </li>
-                  </ul>
-                </div> */}
+       
               </div>
             </nav>
         </>

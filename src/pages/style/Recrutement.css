@@ -1,0 +1,128 @@
+/* Style général */
+.recrutement-page {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+/* Section Hero */
+.recru-section {
+    background-image: linear-gradient(rgba(2, 2, 2, 0.5), rgba(2, 2, 2, 0.5)),
+                     url('../Elements/image/Outils.jpg'); /* Remplacez par une image dédiée */
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    border-bottom: 2px solid #dc3545;
+}
+
+.recru-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.recru-content p {
+    font-size: 1.5rem;
+}
+
+/* Section des postes */
+.postes-section {
+    padding: 4rem 0;
+}
+
+.recru-card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.recru-card:hover {
+    transform: translateY(-10px);
+}
+
+.recru-card-img-top {
+    border-radius: 10px 10px 0 0;
+}
+
+.tt {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* Formulaire */
+.formulaire-section {
+    padding: 0rem 0;
+}
+
+.formulaire {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    grid-column: span 2;
+}
+
+.form-control, .form-select {
+    border-radius: 5px;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+
+
+.bl {
+    background-color: #3498db;
+    border: none;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.bl:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .recru-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.25rem;
+    }
+
+    .card {
+        margin-bottom: 1.5rem;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full-width {
+        grid-column: span 1;
+    }
+}
