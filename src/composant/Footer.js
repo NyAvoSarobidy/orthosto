@@ -79,7 +79,7 @@ function Footer() {
         </div>
 
         {/* Section 4 : Réseaux sociaux */}
-        <div className="row pt-4">
+        {/* <div className="row pt-4">
           <div className="col-12 text-center">
             <h5 className="text-uppercase mb-3">Suivez-nous</h5>
             <a href="https://facebook.com" className="text-white me-3">
@@ -95,7 +95,7 @@ function Footer() {
               <FontAwesomeIcon icon={faLinkedin} size="2x" />
             </a>
           </div>
-        </div>
+        </div> */}
 
         {/* Section 5 : Copyright */}
         <div className="row mt-4">

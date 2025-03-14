@@ -18,14 +18,12 @@ function Techno(){
         <div className="container mt-5">
               <div className="row align-items-center">
           
-              <h5 className=" text-center text-danger fs-2">Cabinet d'orthodontie</h5>
-              <div className="col-md-5 text-center">         
+              <h2 className="text-start fs-2 hover-text">Cabinet d'orthodontie</h2>
+               <div className="col-md-5 text-center ">         
              
-                <p className="text">
-                  <strong className="fw-bold">Pour toute la famille</strong><br />
-                </p>
+               
              
-               <div className="row row-cols-1 g-4"> {/* `row-cols-1` pour une seule colonne par ligne sur tous les écrans */}
+               <div className="row row-cols-1 g-4  pt-4"> {/* `row-cols-1` pour une seule colonne par ligne sur tous les écrans */}
                   {/* Carte pour Enfants */}
                   <div className="col img-zoom card-animation">
                       <div className="card shadow-sm text-dark">

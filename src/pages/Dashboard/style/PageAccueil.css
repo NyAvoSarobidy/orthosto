@@ -1,0 +1,72 @@
+/* Styles pour la carte */
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  
+  .card-header {
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  }
+  
+  .card-body {
+    padding: 2rem;
+  }
+  
+  /* Styles pour les formulaires */
+  .form-control-lg {
+    border-radius: 10px;
+    border: 2px solid #e9ecef;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-control-lg:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  /* Styles pour la section d'upload d'image */
+  .image-upload-section {
+    background-color: #f8f9fa;
+    border: 2px dashed #dee2e6;
+    transition: border-color 0.3s ease;
+  }
+  
+  .image-upload-section:hover {
+    border-color: #80bdff;
+  }
+  
+  .placeholder-image {
+    color: #6c757d;
+    font-size: 1.2rem;
+  }
+  
+  /* Bouton Upload */
+  .x {
+    background-color: #0d6efd;
+
+  
+   
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .x:hover {
+    background-color: #0b5ed7;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .card-body {
+      padding: 1rem;
+    }
+  
+    .form-control-lg {
+      font-size: 1rem;
+    }
+  
+    .x {
+      width: 100%;
+      margin-top: 1rem;
+    }
+  }

@@ -1,0 +1,200 @@
+/* Navbar styles */
+.b {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    margin-top: 120px; /* Ajustement pour la navbar fixe */
+    border-bottom: 3px solid #dc3545; /* Bordure rouge plus épaisse */
+    padding: 1.5rem; /* Espacement interne */
+    max-width: 1100px; /* Limite la largeur pour une meilleure lisibilité */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation au survol */
+  }
+  
+  .b:hover {
+    transform: translateY(-5px); /* Légère élévation au survol */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Ombre plus prononcée au survol */
+  }
+  
+  .b h2 {
+    font-size: 2rem; /* Taille de police plus grande pour le titre */
+    margin-bottom: 0.5rem; /* Espacement sous le titre */
+  }
+  
+  .b .lead {
+    font-size: 1.25rem; /* Taille de police pour le texte */
+    color: #6c757d; /* Couleur de texte grise */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .b {
+      margin-top: 80px; /* Ajustement pour les écrans plus petits */
+      padding: 1rem; /* Espacement interne réduit */
+    }
+  
+    .b h2 {
+      font-size: 1.75rem; /* Taille de police réduite pour les petits écrans */
+    }
+  
+    .b .lead {
+      font-size: 1rem; /* Taille de police réduite pour les petits écrans */
+    }
+  }
+
+
+.custom-navbar {
+    background-color: #fff;
+    z-index: 1000;
+    border-bottom: 3px solid #3f0303;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre */
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #d9534f;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.logo:hover {
+    color: #ff1212;
+}
+
+.highlight {
+    color: #15033f;
+}
+
+.menu-btn {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #d9534f;
+    margin-left: auto;
+    transition: transform 0.3s ease;
+}
+
+.menu-btn:hover {
+    transform: scale(1.1); /* Effet de zoom au survol */
+}
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* Couleur avec transparence */
+    backdrop-filter: blur(10px); /* Effet de flou plus prononcé */
+    padding-top: 60px;
+    transition: all 0.3s ease;
+    z-index: 1040;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1); /* Ombre portée */
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar .logo {
+    font-size: 1.5rem;
+    color: #15033f;
+    margin-bottom: 20px;
+}
+
+.sidebar hr {
+    border: 1px solid #ddd;
+    margin: 10px 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li a {
+    color: #15033f;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    transition: all 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #d9534f;
+    color: white;
+    border-radius: 5px;
+}
+
+.sidebar ul li a i {
+    font-size: 1.2rem;
+    width: 20px;
+    text-align: center;
+}
+
+/* Overlay styles */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1030;
+    backdrop-filter: blur(3px); /* Effet de flou pour l'overlay */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .menu-btn {
+        font-size: 1.2rem;
+    }
+
+    .sidebar {
+        width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .menu-btn {
+        font-size: 1rem;
+    }
+
+    .sidebar {
+        width: 220px;
+    }
+}
+
+/* Sidebar Footer styles */
+.sidebar-footer {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #15033f;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fond semi-transparent */
+    border-top: 1px solid #ddd; /* Ligne de séparation */
+}

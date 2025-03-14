@@ -5,10 +5,10 @@ import image1 from "./image/Adulte1.jpg";
 function OrthoAdulte() {
     return (
         <div className="adulte">
-            <div className="container my-5">
+            <div className="container my-4">
                 {/* Section Titre et Introduction */}
                 <div className="text-start">
-                    <h4 className="text-danger">ORTHODONTIE ADULTE</h4>
+                    <h4  className="text-start fs-2 hover-text" >ORTHODONTIE ADULTE</h4>
                     <p>Prise en charge de l’esthétique globale du sourire</p>
                 </div>
 

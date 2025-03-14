@@ -11,7 +11,7 @@ function NavBar(){
             {/* <Header /> */}
             <nav className="navbar navbar-expand-lg navbar-light shadow-sm fixed-top" >
               <div className="container ">
-                <Link className="navbar-brand text-danger fw-bold" to="/">    
+                <Link className="navbar-brand text-danger fw-bold " to="/">    
                   ORTHO<span style={{ color: "#15033f" }}>STO</span>
                 </Link>
                 <button

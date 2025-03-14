@@ -46,3 +46,32 @@
   transform: scale(1.05); /* Zoom de 5% */
  
 }
+.hover-text {
+  color: red;
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease;
+  text-align: center;
+}
+
+.hover-text:hover {
+  color: black;
+}
+
+.hover-text::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 3px;
+  background-color: red;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+.hover-text:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}

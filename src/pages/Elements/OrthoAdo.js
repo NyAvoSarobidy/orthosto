@@ -10,8 +10,8 @@ function Orthoado(){
          
         <div className="ado">
         <div className="container my-5">
-              <div className="text-center ">
-                     <h4 className="text-danger " >ORTHODONTIE CHEZ LES ADOLESCENTS</h4>
+              <div className="text-start">
+                     <h4 className="text-start fs-2 hover-text" >ORTHODONTIE CHEZ LES ADOLESCENTS</h4>
               </div>
              <p className="text-gray-900 mb-4 fw-bold animate__animated animate__slideInRight">
              L'Orthodontie chez les adolescents correspond la plupart du temps à la pose d'un appareil 

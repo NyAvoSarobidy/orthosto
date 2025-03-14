@@ -12,11 +12,11 @@ function Technologie() {
                     <div className="col-md-12">
                         <div className="card shadow-sm">
                             <div className="card-header bg-dark d-flex align-items-center justify-content-start">
-                                <i className="fas fa-robot me-3 fs-2 text-white"></i>
-                                <h5 className="mb-0 text-white">Nos technologies innovantes</h5>
+                                <i className="fas fa-robot me-3 fs-5"></i>
+                                <h5 className="mb-0 text-dark fs-5">Nos technologies innovantes</h5>
                             </div>
                             <div className="card-body bg-white">
-                                <p className="text fw-bold lead text-center mb-4"> {/* Texte centré et plus grand */}
+                                <p className=" fw-bold lead text-center mb-4"> {/* Texte centré et plus grand */}
                                     Nous investissons dans les dernières technologies orthodontiques pour vous garantir des traitements efficaces et confortables. De la radiographie numérique aux techniques d'imagerie 3D, nous utilisons des outils de pointe pour évaluer et planifier vos soins avec précision.
                                 </p>
 

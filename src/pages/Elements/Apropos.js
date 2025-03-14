@@ -9,11 +9,11 @@ function Apropos(){
             <div id="Apropos" className="mt-5 pb-5" style={{ paddingTop : "50px" }}>
                  <div className="container " >
                  <div className="row align-items-center">
-            <h2 className="text-center text-danger fs-3">ORTHODONTISTE MULHOUSE</h2>
+            <h2 className="text-start fs-2 hover-text">ORTHODONTISTE MULHOUSE</h2>
               {/* Colonne gauche : Texte */}
               
               <div className="col-md-6">         
-                <p className="text">
+                <p className="pt-4">
                   <strong className="fw-bold">TRAITEMENTS EN ORTHODONTIE ET STOMATOLOGIE A MULHOUSE</strong><br />
                   Vous avez toujours rêvé d’un beau sourire ?<br />
                   Lors du bilan bucco-dentaire de votre enfant, votre chirurgien-dentiste vous a conseillé de consulter un orthodontiste ? Vos dents de sagesse vous font terriblement mal ?<br />

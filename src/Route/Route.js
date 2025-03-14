@@ -4,9 +4,11 @@ import Formulaires from "../pages/Formulaires";
 import PageContact from "../pages/Contact";
 import Orthodontie from "../pages/Orthodontie";
 import Stomatologie from "../pages/Stomatologie";
-
 import Enquete from "../pages/Enquete"
 import Recrutement from "../pages/recrutement"
+import Dashboard from "../pages/Dashboard/index"
+import PageAccueil from "../pages/Dashboard/PageAccueil"
+
 
 
 
@@ -20,7 +22,8 @@ function MyRoute() {
       <Route path="/Stomatologie" element={<Stomatologie />} />
       <Route path="/Enquete" element={<Enquete />} />
       <Route path="/Recrutement" element={<Recrutement />} />
-      
+      <Route path="/Dashboard" element={<Dashboard />} />
+      <Route path="/Edit-Accueil" element={<PageAccueil />} />
     </Routes>
   );
 }
