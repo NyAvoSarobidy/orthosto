@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting...</title>
+  <script>
+    // Rediriger vers index.html en conservant le chemin
+    const segment = 1; // Nombre de segments à ignorer (dépend de votre dépôt)
+    const path = window.location.pathname.split('/').slice(segment).join('/');
+    window.location.href = `./index.html#/${path}`;
+  </script>
+</head>
+<body>
+  <p>Redirecting...</p>
+</body>
+</html>
