@@ -131,9 +131,9 @@ function Formulaire() {
   // Afficher le formulaire après le chargement
   return (
     
-    <Container className="my-5">
+    <Container className="my-5 ">
        <ToastContainer />
-      <h2 className="text-danger mb-4 pt-4">Prendre un rendez-vous</h2>
+      <h2 className="text-danger mb-4 pt-5">Prendre un rendez-vous</h2>
 
       {/* Section de remarque */}
       <Alert variant="info" className="mb-4">

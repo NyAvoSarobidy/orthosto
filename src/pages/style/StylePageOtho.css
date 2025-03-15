@@ -1,7 +1,7 @@
 /* Style pour la section */
 .otho {
   width: 100%;
-  height: 70vh; /* Utilisez toute la hauteur de la vue */
+  height: 70vh; /* Hauteur par défaut pour les grands écrans */
   position: relative;
   display: flex;
   align-items: center;
@@ -16,7 +16,7 @@
 .image-triangle-container {
   position: relative;
   width: 100%;
-  height: 400px; /* Ajustez la hauteur selon vos besoins */
+  height: 400px; /* Hauteur pour les grands écrans */
 }
 
 /* Style pour chaque image */
@@ -52,17 +52,32 @@
   border-radius: 50%;
   border: 5px solid white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: rotateIn 1s ease-in-out; /* Animation d'apparition */
 }
 
 .image-wrapper img:hover {
-  transform: scale(1.05); /* Effet de zoom au survol */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée au survol */
+  transform: scale(1.1); /* Effet de zoom au survol */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Ombre plus prononcée */
+}
+
+/* Animation pour les images */
+@keyframes rotateIn {
+  from {
+      opacity: 0;
+      transform: rotate(-90deg) scale(0.5);
+  }
+  to {
+      opacity: 1;
+      transform: rotate(0deg) scale(1);
+  }
 }
 
 /* Style pour le titre */
 .otho h2 {
-  color: #ffffff; /* Couleur du texte */
+  color: #ffffff;
   font-weight: bold;
+  font-size: 3rem; /* Taille par défaut pour les grands écrans */
+  animation: fadeIn 1s ease-in-out; /* Animation d'apparition */
 }
 
 /* Style pour la ligne horizontale */
@@ -71,42 +86,90 @@
   opacity: 1; /* Assure que la ligne est bien visible */
 }
 
+/* Style pour le texte */
+.otho p {
+  color: #ffffff;
+  font-size: 1.25rem; /* Taille par défaut pour les grands écrans */
+  animation: fadeIn 1s ease-in-out; /* Animation d'apparition */
+}
+
+/* Animation pour le texte */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .otho {
-      height: auto; /* Ajustez la hauteur pour les petits écrans */
+      height: auto; /* Hauteur automatique pour les petits écrans */
       padding: 60px 0; /* Espacement vertical */
   }
 
   .image-triangle-container {
-      height: 300px; /* Réduisez la hauteur pour les petits écrans */
+      height: 300px; /* Réduire la hauteur pour les petits écrans */
   }
 
   .image-wrapper {
-      width: 120px; /* Réduisez la taille des images pour les petits écrans */
+      width: 120px; /* Réduire la taille des images pour les petits écrans */
       height: 120px;
   }
 
   .image-1 {
-      top: 20px; /* Ajustez la position pour les petits écrans */
+      top: 20px; /* Ajuster la position pour les petits écrans */
   }
 
   .image-2 {
-      bottom: 20px; /* Ajustez la position pour les petits écrans */
-      left: 5%; /* Ajustez cette valeur pour décaler à gauche */
+      bottom: 20px; /* Ajuster la position pour les petits écrans */
+      left: 5%; /* Ajuster cette valeur pour décaler à gauche */
   }
 
   .image-3 {
-      bottom: 20px; /* Ajustez la position pour les petits écrans */
-      right: 5%; /* Ajustez cette valeur pour décaler à droite */
+      bottom: 20px; /* Ajuster la position pour les petits écrans */
+      right: 5%; /* Ajuster cette valeur pour décaler à droite */
   }
 
   .otho h2 {
-      font-size: 2.5rem; /* Réduisez la taille du titre pour les petits écrans */
-      margin-top: 50px; /* Ajustez la marge pour les petits écrans */
+      font-size: 2rem; /* Taille réduite pour les petits écrans */
+      margin-top: 20px; /* Ajuster la marge */
   }
 
   .otho p {
-      font-size: 1rem; /* Réduisez la taille du texte pour les petits écrans */
+      font-size: 1rem; /* Taille réduite pour les petits écrans */
+  }
+
+  .otho hr {
+      max-width: 200px; /* Réduire la largeur de la ligne */
+  }
+}
+
+@media (max-width: 576px) {
+  .image-triangle-container {
+      height: 250px; /* Réduire encore la hauteur pour les très petits écrans */
+  }
+
+  .image-wrapper {
+      width: 100px; /* Réduire encore la taille des images */
+      height: 100px;
+  }
+
+  .image-1 {
+      top: 10px; /* Ajuster la position pour les très petits écrans */
+  }
+
+  .image-2 {
+      bottom: 10px; /* Ajuster la position pour les très petits écrans */
+      left: 2%; /* Ajuster cette valeur pour décaler à gauche */
+  }
+
+  .image-3 {
+      bottom: 10px; /* Ajuster la position pour les très petits écrans */
+      right: 2%; /* Ajuster cette valeur pour décaler à droite */
   }
 }

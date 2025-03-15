@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { HashRouter  } from 'react-router-dom'; // Remplacez BrowserRouter par HashRouter
+import { BrowserRouter } from 'react-router-dom'; // Utilisez BrowserRouter
 import './index.css';
 import App from './App';
 import { AccueilProvider } from './AccueilContext';
@@ -10,14 +10,13 @@ import 'bootstrap/dist/js/bootstrap.js';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import reportWebVitals from './reportWebVitals';
 
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <HashRouter>
-     <AccueilProvider> {/* Enveloppez l'application avec le fournisseur de contexte */}
+  <BrowserRouter basename="/Test-deploye"> {/* Ajoutez la basename */}
+    <AccueilProvider>
       <App />
     </AccueilProvider>
-  </HashRouter>
+  </BrowserRouter>
 );
 
 reportWebVitals();

@@ -1,38 +1,83 @@
+/* 🌟 Section principale */
 .Localisation {
   background-color: rgb(240, 239, 237);
-  padding: 60px 0;
+  padding: 60px 20px;
+  text-align: center;
 }
 
+/* 🌟 Titre */
+.Localisation h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #dc3545; /* Rouge Bootstrap */
+  margin-bottom: 20px;
+}
+
+/* 🌟 Texte */
+.Localisation p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+}
+
+/* 🌟 Images */
 .sary2 {
   width: 100%;
   height: 200px;
   object-fit: cover;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
 .sary2:hover {
-  transform: scale(1.05); /* Zoom léger au survol */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* 🌟 Section des images en flexbox pour un bon alignement */
+.row.justify-content-center {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* 🌟 Bouton amélioré */
+.btn-danger {
+  font-size: 1.2rem;
+  padding: 12px 25px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-danger:hover {
+  background-color: #a71d2a;
+  transform: translateY(-3px);
+}
+
+/* 🌟 Modal */
 .modal-content {
   border-radius: 15px;
   overflow: hidden;
   animation: fadeIn 0.3s ease;
 }
 
+/* Animation d'apparition */
 @keyframes fadeIn {
   from {
-      opacity: 0;
-      transform: translateY(-20px);
+    opacity: 0;
+    transform: translateY(-20px);
   }
   to {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
+/* 🌟 Loader personnalisé */
 .custom-loader {
   border: 4px solid #f3f3f3;
   border-top: 4px solid #3498db;
@@ -52,17 +97,30 @@
   100% { transform: rotate(360deg); }
 }
 
-/* Responsive adjustments */
+/* 📱🌟 RESPONSIVE DESIGN */
 @media (max-width: 768px) {
-  .sary2 {
-      margin-bottom: 1rem; /* Espacement supplémentaire sur mobile */
+  .Localisation {
+    padding: 40px 10px;
   }
 
-  .Localisation {
-      padding: 40px 0;
+  .Localisation h2 {
+    font-size: 1.8rem;
+  }
+
+  .Localisation p {
+    font-size: 1rem;
+  }
+
+  .sary2 {
+    height: 180px;
+  }
+
+  .btn-danger {
+    font-size: 1rem;
+    padding: 10px 20px;
   }
 
   .modal-content {
-      margin: 10px;
+    margin: 10px;
   }
 }

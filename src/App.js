@@ -3,6 +3,7 @@ import MyRouter from "./Route/Route";
 // import Main from "./pages/Main";
 
 
+
 function App() {
   // const [message, setMessage] = useState('');
 
@@ -19,6 +20,7 @@ function App() {
   return (
     
     <div>    
+      
       {/* <Main />         */}
       <MyRouter />  
    </div> 
