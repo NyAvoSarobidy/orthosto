@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/cabineto/Cabinet/
+    - /bin/cp -Rf * $DEPLOYPATH
