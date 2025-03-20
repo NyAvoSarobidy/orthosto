@@ -12,7 +12,7 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter basename="/Test-deploye"> {/* Ajoutez la basename */}
+  <BrowserRouter basename="/orthosto"> {/* Ajoutez la basename */}
     <AccueilProvider>
       <App />
     </AccueilProvider>
