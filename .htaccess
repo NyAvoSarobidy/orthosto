@@ -1,0 +1,17 @@
+# Autoriser l'accès au fichier .htaccess
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Redirection pour permettre au routeur React de gérer les routes
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ index.html [QSA,L]
+</IfModule>
+
+# Paramètres de cache pour améliorer les performances
+<IfModule mod_headers.c>
+  # Cache des fichiers statiques pendant 1 an
+  <FilesMatch "\.(ico|jpg|jpeg|png|gif|js|css|woff|woff2|tff|svg|eot)$">
+    Header set Cache-Control "max-age=31536000, public"
+  </FilesMatch>
+</IfModule>
