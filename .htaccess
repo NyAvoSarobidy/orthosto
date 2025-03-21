@@ -1,3 +1,7 @@
+# Redirection de la racine vers /orthosto
+RewriteCond %{REQUEST_URI} ^/$
+RewriteRule ^$ /orthosto/ [L,R=301]
+
 # Autoriser l'accès au fichier .htaccess
 <IfModule mod_rewrite.c>
   RewriteEngine On
