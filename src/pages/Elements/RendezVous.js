@@ -10,7 +10,7 @@ function RendezVous() {
                     <div className="col-12 text-center">
                         <i className="fas fa-calendar-check text-success icon mb-3"></i> {/* Icône modifiée */}
                         <h2 className="title">Premier rendez-vous ?</h2>
-                        <p className="text">
+                        <p className="">
                             <strong className="fw-bold">
                                 Besoin d'un avis pour connaître la nécessité de mettre en place un traitement d'orthodontie ?
                             </strong><br />

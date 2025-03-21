@@ -40,7 +40,7 @@ function Carte() {
                   Dr. Tuncay SAHIN <i className="fas fa-tooth ms-2"></i>
                 </div>
               </div>
-              <hr className="me-5" style={{ width: '100%', maxWidth: '400px', margin: 'auto' }} />
+              <hr />
               <div className="cabinet-name">CABINET D'ORTHODONTIE ET STOMATOLOGIE</div>
 
               <p className="pt-2">

@@ -1,6 +1,6 @@
 import React from "react";
 import '../style/styleApropos.css'
-import image1 from './image/image.png'
+import image1 from './image/Ortho4.jpg'
 import image2 from './image/images.jpeg'
 import image3 from './image/image2.jpg'
 function Apropos(){
@@ -26,7 +26,7 @@ function Apropos(){
               {/* Colonne droite : Image */}
               <div className="col-md-6 d-flex flex-column gap-4 pt-5" >
                
-              <div style={{ position: 'relative', width: '90%', maxWidth: '45%', margin: '0 auto' }}>
+              <div style={{ position: 'relative', width: '100%', maxWidth: '45%', margin: '0 auto' }}>
       {/* Première image */}
       <img
         src={image3}
@@ -48,7 +48,7 @@ function Apropos(){
         src={image1}
         alt="Orthodontiste"
         className="img-thumbnail rounded"
-        style={{ width: '100%', height: 'auto' }}
+        style={{ width: '200%', height: 'auto' }}
       />
     </div>
                 </div>

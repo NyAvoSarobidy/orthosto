@@ -2,6 +2,7 @@
 
 import React from "react";
 import '../style/OrthoInfo1.css';
+import { Link } from 'react-router-dom';
 
 
 function OrthoInfo1() {
@@ -75,7 +76,32 @@ function OrthoInfo1() {
                   On peut alors mettre en place une attelle en fibre de verre noyée dans une colle composite.
                 </p>
             </div>
+            <div className="container my-5  text-center">
+            <h4 className="text-danger">Recherche associée</h4>
+
+            <div className="">
+                {/* Corps de la carte */}
+                <div className="">
+                    <h5 className="card-title">Dr Alev KAYA</h5>
+                    <p className="card-text">Chirurgien-dentiste à Mulhouse</p>
+                    <p className="card-text">
+                        Adresse : 28 Rue du Sauvage, 68100 Mulhouse
+                    </p>
+                    <a 
+                        href="https://www.doctolib.fr/dentiste/mulhouse/alev-kaya-mulhouse" 
+                        className="text-decoration-none"
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                    >
+                        Prendre rendez-vous en ligne
+                    </a>
+                </div>
+            </div>
         </div>
+
+
+        </div>
+        
     );
 }
 

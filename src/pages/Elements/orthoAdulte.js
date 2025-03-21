@@ -24,7 +24,7 @@ function OrthoAdulte() {
                 </p>
 
                 {/* Section Image et Liste */}
-                <div className="row align-items-center justify-content-center">
+                <div className="row align-items-center">
                     {/* Colonne Image */}
                     <div className="col-12 col-md-6 text-center mb-4 mb-md-0">
                         <img src={image1} alt="Orthodontie Adulte" className="img-fluid" />
