@@ -39,59 +39,52 @@ function RecrutementFormulaire() {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); // Empêche le rechargement de la page
-    setIsLoading(true); // Active le loader
-    const formData = new FormData(e.target); // Récupère les données du formulaire
-  
+    e.preventDefault();
+    setIsLoading(true);
+
     try {
-      const response = await fetch("https://formspree.io/f/xpwpwzoa", {
-        method: "POST",
-        body: formData,
-        headers: {
-          Accept: "application/json",
-        },
-      });
-  
-      if (response.ok) {
-        // Affiche un message de succès avec SweetAlert2
-        Swal.fire({
-          icon: 'success',
-          title: 'Merci !',
-          text: `Merci, ${formData.get('nom')} ! Nous avons bien reçu vos coordonnées. Veuillez envoyer votre CV à cabinet@orthosto.com.`,
-          confirmButtonText: 'OK',
+        const response = await fetch('https://node-email.vercel.app/send-email', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
         });
-  
-        // Réinitialisez le formulaire
-        setFormData({
-          nom: '',
-          email: '',
-          telephone: '',
-          poste: '',
-          message: ''
+
+        const result = await response.json();
+
+        if (response.ok) {
+              Swal.fire({
+                icon: 'success',
+                title: 'Message envoyé !',
+                text: result.message,
+            });
+            setFormData({
+                nom: '',
+                email: '',
+                telephone: '',
+                poste: '',
+                message: '',
+            });
+        } else {
+          Swal.fire({
+            icon: 'error',
+            title: 'Erreur',
+            text: 'Erreur lors de l’envoi du message.',
         });
-      } else {
-        // Affiche un message d'erreur avec SweetAlert2
-        Swal.fire({
-          icon: 'error',
-          title: 'Erreur',
-          text: "Une erreur s'est produite. Veuillez réessayer.",
-          confirmButtonText: 'OK',
-        });
-      }
+        }
     } catch (error) {
-      console.error("Erreur lors de la soumission du formulaire :", error);
-  
-      // Affiche un message d'erreur en cas d'exception
-      Swal.fire({
-        icon: 'error',
-        title: 'Erreur',
-        text: "Une erreur s'est produite. Veuillez réessayer.",
-        confirmButtonText: 'OK',
-      });
-    }finally {
-      setIsLoading(false); // Désactive le loader
+          Swal.fire({
+            icon: 'error',
+            title: 'Erreur de connexion',
+            text: 'Impossible de contacter le serveur.',
+        });
+    } finally {
+        setIsLoading(false);
     }
-  };
+};
+
+  
 
   return (
     <div className="recrutement-page">
@@ -179,8 +172,6 @@ function RecrutementFormulaire() {
           {/* Colonne de droite pour le formulaire */}
           <div className="col-md-6">
             <form
-              action="https://formspree.io/f/{votre_id_formulaire}"
-              method="POST"
               onSubmit={handleSubmit}
               className="formulaire bg-light border border-primary rounded shadow-sm p-4"
             >
@@ -280,20 +271,20 @@ function RecrutementFormulaire() {
               </div>
 
               <button
-  type="submit"
-  className="btn btn-primary w-100 mt-3"
-  disabled={isLoading} // Désactive le bouton pendant le chargement
->
-  {isLoading ? (
-    <>
-      <i className="fas fa-spinner fa-spin me-2"></i> Envoi en cours...
-    </>
-  ) : (
-    <>
-      <i className="fas fa-paper-plane me-2"></i> Envoyer ma candidature
-    </>
-  )}
-</button>
+                type="submit"
+                className="btn btn-primary w-100 mt-3"
+                disabled={isLoading} // Désactive le bouton pendant le chargement
+              >
+                {isLoading ? (
+                  <>
+                    <i className="fas fa-spinner fa-spin me-2"></i> Envoi en cours...
+                  </>
+                ) : (
+                  <>
+                    <i className="fas fa-paper-plane me-2"></i> Envoyer ma candidature
+                  </>
+                )}
+              </button>
             </form>
 
             <p className="text-center mt-3">

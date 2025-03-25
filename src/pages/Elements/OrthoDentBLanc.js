@@ -68,36 +68,9 @@ function OrthoInfo1() {
                 <p className="text-gray-900 mb-4 fw-bold animate__animated animate__slideInRight">
                 Quand les dents sont alignées et correctement emboîtées, débute la phase de stabilisation dite de contention : pour les dents du bas, il est préconisé d’utiliser un petit arc métallique collé derrière les incisives et canines. Cet arc sera à garder le plus longtemps possible. Les dents bougeants
                  toute notre vie, seule cette contention garantira la pérennité du traitement orthodontique. </p>  
-                 <hr className="fw-bold" />
-
-                {/* Deuxième paragraphe */}
-                <p className="text-gray-900 mb-4">
-                 👉  Pour les dents du haut, il est préconisé de porter une contention sous forme de gouttière transparente à porter en permanence (sauf pour manger) pendant les 4 à 5 mois suivant la dépose de l’appareil actif puis la nuit pendant les 4 à 5 mois suivants. Ces précautions peuvent ne pas suffir, et il est possible que les incisives du haut aient tendance à bouger.
-                  On peut alors mettre en place une attelle en fibre de verre noyée dans une colle composite.
-                </p>
+               
             </div>
-            <div className="container my-5  text-center">
-            <h4 className="text-danger">Recherche associée</h4>
-
-            <div className="">
-                {/* Corps de la carte */}
-                <div className="">
-                    <h5 className="card-title">Dr Alev KAYA</h5>
-                    <p className="card-text">Chirurgien-dentiste à Mulhouse</p>
-                    <p className="card-text">
-                        Adresse : 28 Rue du Sauvage, 68100 Mulhouse
-                    </p>
-                    <a 
-                        href="https://www.doctolib.fr/dentiste/mulhouse/alev-kaya-mulhouse" 
-                        className="text-decoration-none"
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                    >
-                        Prendre rendez-vous en ligne
-                    </a>
-                </div>
-            </div>
-        </div>
+           
 
 
         </div>

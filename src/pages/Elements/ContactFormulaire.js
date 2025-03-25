@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-import emailjs from "emailjs-com";
 import '../style/ContactFormulaire.css';
 import Swal from 'sweetalert2';
 
@@ -7,52 +6,58 @@ function ContactFormulaire() {
     const form = useRef(); // Référence pour le formulaire
     const [isLoading, setIsLoading] = useState(false); // État de chargement
 
-    const sendEmail = (e) => {
+    const sendEmail = async (e) => {
         e.preventDefault(); // Empêche le rechargement de la page
         setIsLoading(true); // Active l'état de chargement
 
-        // Détection automatique du service en fonction de l'adresse email
-        const email = form.current.email.value;
-        let serviceId = "service_9sbvnae"; // Service ID par défaut (Gmail)
+        // Récupérer les données du formulaire
+        const formData = new FormData(form.current);
+        const data = {
+            nom: formData.get('nom'),
+            prenom: formData.get('prenom'),
+            email: formData.get('email'),
+            telephone: formData.get('telephone'),
+            message: formData.get('message'),
+        };
 
-        if (email.includes("@outlook.com")) {
-            serviceId = "service_jst9z0h"; // Service ID pour Outlook
-        }
-
-        // Envoyer l'email via EmailJS
-        emailjs
-            .sendForm(
-                serviceId, // Service ID dynamique
-                "template_71cbpjk", // Remplacez par votre Template ID
-                form.current,
-                "ZvJWK_QwBYJ9Wxbep" // Remplacez par votre User ID
-            )
-            .then(
-                (result) => {
-                    console.log("Email envoyé avec succès !", result.text);
-                    Swal.fire({
-                        icon: 'success',
-                        title: 'Message envoyé !',
-                        text: 'Votre message a été envoyé avec succès.',
-                        confirmButtonText: 'OK',
-                    });
-
-                    form.current.reset();
-                    // Réinitialiser le formulaire
+        try {
+            // Envoyer les données au serveur
+            const response = await fetch('https://node-email.vercel.app/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
                 },
-                (error) => {
-                    console.log("Erreur lors de l'envoi de l'email :", error.text);
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Erreur',
-                        text: 'Une erreur s\'est produite. Veuillez réessayer.',
-                        confirmButtonText: 'OK',
-                    });
-                }
-            )
-            .finally(() => {
-                setIsLoading(false); // Désactive l'état de chargement
+                body: JSON.stringify(data),
             });
+
+            if (response.ok) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Message envoyé !',
+                    text: 'Votre message a été envoyé avec succès.',
+                    confirmButtonText: 'OK',
+                });
+                form.current.reset(); // Réinitialiser le formulaire
+            } else {
+                const errorData = await response.json();
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Erreur',
+                    text: errorData.message || 'Une erreur s\'est produite. Veuillez réessayer.',
+                    confirmButtonText: 'OK',
+                });
+            }
+        } catch (error) {
+            console.error('Erreur lors de l\'envoi du formulaire :', error);
+            Swal.fire({
+                icon: 'error',
+                title: 'Erreur',
+                text: 'Une erreur s\'est produite. Veuillez réessayer.',
+                confirmButtonText: 'OK',
+            });
+        } finally {
+            setIsLoading(false); // Désactive l'état de chargement
+        }
     };
 
     return (
@@ -81,7 +86,7 @@ function ContactFormulaire() {
                                                 <div className="form-group">
                                                     <label htmlFor="nom" className="form-label">Nom *</label>
                                                     <div className="input-group">
-                                                       <input
+                                                        <input
                                                             type="text"
                                                             className="form-control"
                                                             name="nom"
@@ -95,7 +100,7 @@ function ContactFormulaire() {
                                                 <div className="form-group">
                                                     <label htmlFor="prenom" className="form-label">Prénom *</label>
                                                     <div className="input-group">
-                                                      <input
+                                                        <input
                                                             type="text"
                                                             className="form-control"
                                                             name="prenom"
@@ -111,7 +116,6 @@ function ContactFormulaire() {
                                         <div className="form-group mb-3">
                                             <label htmlFor="email" className="form-label">Email *</label>
                                             <div className="input-group">
-                                               
                                                 <input
                                                     type="email"
                                                     className="form-control"
@@ -126,7 +130,7 @@ function ContactFormulaire() {
                                         <div className="form-group mb-3">
                                             <label htmlFor="telephone" className="form-label">Téléphone *</label>
                                             <div className="input-group">
-                                              <input
+                                                <input
                                                     type="tel"
                                                     className="form-control"
                                                     name="telephone"
@@ -140,7 +144,7 @@ function ContactFormulaire() {
                                         <div className="form-group mb-4">
                                             <label htmlFor="message" className="form-label">Message *</label>
                                             <div className="input-group">
-                                               <textarea
+                                                <textarea
                                                     className="form-control"
                                                     name="message"
                                                     rows="5"

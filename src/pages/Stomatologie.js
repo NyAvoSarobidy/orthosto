@@ -6,6 +6,8 @@ import Header from '../composant/Header'
 import PageSto from './Elements/PageSto'
 import StoInfo from './Elements/PageStoInfo'
 import StoInfo2 from './Elements/StoInfo2'
+import VideoPlayer from './Elements/videoSto'
+
 
 function Stomatologie(){
     const [showButton, setShowButton] = useState(false);
@@ -37,6 +39,8 @@ function Stomatologie(){
                 <PageSto />
                 <StoInfo />
                 <StoInfo2 />
+                <VideoPlayer />
+
                 
                 
                 <Footer />

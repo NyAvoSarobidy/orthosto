@@ -22,13 +22,15 @@ function RendezVous() {
                 </div>
                 <div className="row justify-content-center mt-4">
                     <div className="col-12 col-md-auto mb-2 mb-md-0">
-                        <Link to="/Orthodontie" className="btn btn-outline-primary w-100 btn-hover">
+                        <Link to="https://www.doctolib.fr/dentiste/mulhouse/alev-kaya-mulhouse" target="_blank" className="btn btn-outline-primary w-100 btn-hover">
                             <i className="fas fa-tooth me-2"></i>
                             ORTHODONTIE
                         </Link>
                     </div>
                     <div className="col-12 col-md-auto">
-                        <Link to="/Stomatologie" className="btn btn-outline-danger w-100 btn-hover">
+                        <Link
+                        target="_blank"
+                        to="https://www.doctolib.fr/stomatologue/mulhouse/tuncay-sahin" className="btn btn-outline-danger w-100 btn-hover">
                             <i className="fas fa-heart me-2"></i>
                             STOMATOLOGIE
                         </Link>

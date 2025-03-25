@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Container, Form, Button, Row, Col, Alert, Spinner } from "react-bootstrap";
 import { FaInfoCircle, FaExclamationTriangle } from "react-icons/fa"; // Icônes pour la remarque
-import emailjs from "emailjs-com"; // Importer EmailJS
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../style/Formulaire.css"; // Fichier CSS personnalisé
-
 
 function Formulaire() {
   const [loading, setLoading] = useState(true); // État pour gérer le loader
@@ -20,10 +18,8 @@ function Formulaire() {
     carteVitale: false,
     courrierDentiste: false,
     ordonnance: false,
-    service: "gmail", // Par défaut, utiliser Gmail
   });
   const [submitted, setSubmitted] = useState(false); // État pour afficher un message de succès
-
 
   // Simuler un chargement de 10 secondes
   useEffect(() => {
@@ -42,78 +38,68 @@ function Formulaire() {
     });
   };
 
-
-  // Gestion de la soumission du formulaire avec EmailJS
-  const handleSubmit = (e) => {
+  // Gestion de la soumission du formulaire
+  const handleSubmit = async (e) => {
     e.preventDefault();
-   
 
-    const getServiceByEmail = (email) => {
-      if (email.includes("@gmail.com")) {
-        return "gmail"; // Utiliser le service Gmail
-      } else if (email.includes("@outlook.com") || email.includes("@hotmail.com")) {
-        return "outlook"; // Utiliser le service Outlook
-      } else {
-        return "gmail"; // Par défaut, utiliser Gmail (ou un autre service)
-      }
-    };
-    // Déterminer le service d'envoi en fonction de l'email
-    const service = getServiceByEmail(formData.email);
-  
-    // Paramètres pour l'email
-    const templateParams = {
+    // Données à envoyer au serveur
+    const data = {
       nom: formData.nom,
       prenom: formData.prenom,
-      email: formData.email,
       telephone: formData.telephone,
+      email: formData.email,
       motif: formData.motif,
       remarques: formData.remarques,
       carteVitale: formData.carteVitale ? "Oui" : "Non",
       courrierDentiste: formData.courrierDentiste ? "Oui" : "Non",
       ordonnance: formData.ordonnance ? "Oui" : "Non",
     };
-  
-    // Choisir le Service ID et le Template ID en fonction du service
-    const serviceId = service === "gmail" ? "service_c1y8slf" : "service_jst9z0h";
-    const templateId = service === "gmail" ? "template_scjya2w" : "template_scjya2w";
-  
-    // Envoyer l'email via EmailJS
-    emailjs
-      .send(
-        serviceId, // Service ID (Gmail ou Outlook)
-        templateId, // Template ID (Gmail ou Outlook)
-        templateParams, // Données du formulaire
-        "ZvJWK_QwBYJ9Wxbep" // User ID
-      )
-      .then(
-        (response) => {
-         
-          toast.success("Email envoyé avec succès ! 😊", {
-            position: "top-right",
-            autoClose: 5000, // Fermer automatiquement après 5 secondes
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-          });
-          //console.log("Email envoyé avec succès !", response);
-          setSubmitted(true); // Afficher un message de succès
+
+    try {
+      // Envoyer les données au serveur
+      const response = await fetch('https://node-email.vercel.app/Prendre-RDV', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
-        (error) => {
-        
-          toast.error(`Erreur lors de l'envoi de l'email 😞 : ${error.text}`, {
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-          });
-          // console.error("Erreur lors de l'envoi de l'email :", error);
-        }
-      );
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        toast.success("Demande de rendez-vous envoyée avec succès ! 😊", {
+          position: "top-right",
+          autoClose: 5000, // Fermer automatiquement après 5 secondes
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+        setSubmitted(true); // Afficher un message de succès
+      } else {
+        const errorData = await response.json();
+        toast.error(`Erreur : ${errorData.message}`, {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      }
+    } catch (error) {
+      toast.error("Erreur lors de l'envoi de la demande 😞", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+      console.error("Erreur lors de l'envoi de la demande :", error);
+    }
   };
 
   // Afficher le loader pendant 10 secondes
@@ -130,9 +116,8 @@ function Formulaire() {
 
   // Afficher le formulaire après le chargement
   return (
-    
-    <Container className="my-5 ">
-       <ToastContainer />
+    <Container className="my-5">
+      <ToastContainer />
       <h2 className="text-danger mb-4 pt-5">Prendre un rendez-vous</h2>
 
       {/* Section de remarque */}
@@ -212,7 +197,7 @@ function Formulaire() {
               />
             </Form.Group>
           </Col>
-           <Col md={6}>
+          <Col md={6}>
             <Form.Group controlId="email" className="mb-3">
               <Form.Label>
                 Email <span className="text-danger">*</span>
@@ -225,7 +210,7 @@ function Formulaire() {
                 required
               />
             </Form.Group>
-          </Col> 
+          </Col>
         </Row>
 
         {/* Motif de rendez-vous */}
@@ -298,13 +283,11 @@ function Formulaire() {
           />
         </Form.Group>
 
-    
         {/* Bouton de soumission */}
         <div className="text-center">
-        <Button variant="primary" type="submit" className="btn-submit" >
-               Envoyer la demande
-        
-        </Button>
+          <Button variant="primary" type="submit" className="btn-submit">
+            Envoyer la demande
+          </Button>
         </div>
       </Form>
     </Container>

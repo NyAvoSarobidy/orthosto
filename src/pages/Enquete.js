@@ -57,54 +57,74 @@ function Enquete() {
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
-    setFormData((prevState) => {
-      if (type === 'checkbox') {
-        return {
-          ...prevState,
-          [name]: checked
-            ? [...prevState[name], value]
-            : prevState[name].filter((item) => item !== value)
-        };
-      } else {
-        return { ...prevState, [name]: value };
-      }
-    });
-  };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+    if (type === 'checkbox') {
+        // Gestion des cases à cocher (pour Choix et Cabinet)
+        setFormData((prevData) => ({
+            ...prevData,
+            [name]: checked
+                ? [...prevData[name], value] // Ajoute la valeur au tableau
+                : prevData[name].filter((item) => item !== value), // Retire la valeur du tableau
+        }));
+    } else if (type === 'radio') {
+        // Gestion des boutons radio (pour Accueil et Recommandation)
+        setFormData((prevData) => ({
+            ...prevData,
+            [name]: value,
+        }));
+    } else {
+        // Gestion des autres champs (date, Raison, Commentaires)
+        setFormData((prevData) => ({
+            ...prevData,
+            [name]: value,
+        }));
+    }
+};
 
-    try {
-      const response = await fetch('https://formspree.io/f/xrbpgnkn', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
-        },
-        body: JSON.stringify(formData),
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  // Validation côté frontend
+  if (!formData.date || formData.Choix.length === 0 || !formData.Raison || formData.Cabinet.length === 0 || !formData.Accueil || !formData.Recommandation) {
+      setResponseMessage('Veuillez remplir tous les champs obligatoires.');
+      return;
+  }
+
+  setIsSubmitting(true);
+  console.log("Données envoyées :", formData); // Inspectez les données
+
+  try {
+      const response = await fetch('https://node-email.vercel.app/Enquette', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
       });
 
       if (response.ok) {
-        setResponseMessage('Merci pour votre retour !');
-        setFormData({
-          date: '',
-          Choix: [],
-          Raison: '',
-          Cabinet: [],
-          Accueil: '',
-          Recommandation: '',
-          Commentaires: ''
-        });
+          setResponseMessage('Merci pour votre retour !');
+          setFormData({
+              date: '',
+              Choix: [],
+              Raison: '',
+              Cabinet: [],
+              Accueil: '',
+              Recommandation: '',
+              Commentaires: ''
+          });
       } else {
-        setResponseMessage('Une erreur est survenue. Veuillez réessayer.');
+          const errorData = await response.json(); // Lisez le message d'erreur du serveur
+          setResponseMessage(`Erreur : ${errorData.message}`);
       }
-    } catch (error) {
+  } catch (error) {
       setResponseMessage('Erreur lors de l’envoi du formulaire.');
-    } finally {
+  } finally {
       setIsSubmitting(false);
-    }
-  };
+  }
+};
+
 
   return (
     <>
